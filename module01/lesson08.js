@@ -1,4 +1,5 @@
-// This lesson was meant for developing the extra exercises list. The exercises are available in the "extra_exercises" folder.
+// This first part of this lesson was dedicated to developing the control structures activities from the extra exercises list. 
+// The exercises are available in the "extra_exercises" folder.
 
 /* Arrays
 On Js, an array is an Object, and here's how you declare it: */
