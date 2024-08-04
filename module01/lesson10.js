@@ -17,18 +17,15 @@ fruitsList[4] = "Guava"
 console.log(fruitsList.sort())
 
 // Testing sort() in a numbered array
-
 let numberList = []
 numberList[0] = 12
 numberList[1] = 13
 numberList[2] = 0
 numberList[3] = 8
 numberList[4] = 16
-
 console.log(numberList.sort((a, b) => a - b)) // (a, b) => a - b) ensures numerical sorting
 
 /* Here's how the comparator function works:
-
 For any two elements a and b in the array:
 If a - b is less than 0, a is considered smaller and should come before b.
 If a - b is greater than 0, a is considered larger and should come after b.
@@ -54,12 +51,9 @@ let area = calculateLandArea(width, height) // That's why you need to declare th
 console.log(`The area has ${area} square meters.`)
 
 // Create a sorting function to organize an array
-
 let alphabet = ["A", "D", "E", "F", "C", "B"]
-
 function sortingFunction(alphabetArray){
     return alphabetArray.sort()
 
 }
-
 console.log(sortingFunction(alphabet))
