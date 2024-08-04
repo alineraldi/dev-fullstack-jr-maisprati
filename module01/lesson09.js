@@ -56,9 +56,9 @@ for(let n = 0; n < matrix.length; n++){
         console.log(`Elemento na posição [${n}][${o}]: ${matrix[n][o]}`)
     }
 }
-// in order to make a loop for run through a multidimensional array, you must use a loop for inside another one. One's for lines, the other's for columns.
+// In order to make a loop for run through a multidimensional array, you must use a loop for inside another one. One's for lines, the other's for columns.
 
-// Dealing with two Multidimensional Arrays -- SUM
+// Dealing with two Multidimensional Arrays -- SUM //
 let result = []
 let arr1 = [
     [1, 2, 3, 4],
@@ -80,5 +80,4 @@ for(let p = 0; p < arr1.length; p++){
     
     result.push(lineSum)
 }
-
 console.table(result)
