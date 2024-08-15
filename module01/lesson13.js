@@ -42,7 +42,6 @@ for(let book of library){
 Use the method forEach to iterate over the array movies.
 For each movie, verify if the genre already exists in the counted object.
 If it does, increment the count; if it doesn't, add the genre to the object wih the inicial count of 1. */
-
 const movies = [
     {title: "Lady Bird", releaseYear: 2017, director: "Greta Gerwig", genre: "Comedy-Drama"},
     {title: "The Piano", releaseYear: 1993, director: "Jane Campion", genre: "Drama"},
@@ -50,7 +49,6 @@ const movies = [
     {title: "Lost in Translation", releaseYear: 2003, director: "Sofia Coppola", genre: "Comedy-Drama"},
     {title: "Selma", releaseYear: 2014, director: "Ava DuVernay", genre: "Historical Drama"}
 ];
-
 let genreCount = {}
 movies.forEach(movie =>{
     if(genreCount[movie.genre]){
