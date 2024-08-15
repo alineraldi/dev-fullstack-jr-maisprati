@@ -88,7 +88,6 @@ for(let key in game1){
 }
 
 /* FOR...OF: ITERATES OVER THE values OF AN ITERABLE (LIKE ARRAYS, STRINGS, MAPS, SETS).*/
-
 const players = ["Pelé", "CR7", "Messi"]
 for(let player of players){
     console.log(player)
@@ -96,7 +95,7 @@ for(let player of players){
 
 /* FOREACH: EXECUTES A FUNCTION FOR EACH ELEMENT IN AN ARRAY */
 players.forEach((value, index) => {
-    console.log(`The index is: ${index} and the value is ${index}`)
+    console.log(`The index is: ${index} and the value is ${value}`)
 })
 
 /* Final challenge: iterate the objects developed in this class using forIn and forOf */
@@ -104,15 +103,13 @@ console.log("For In:")
 for(let key in serie){
     console.log(`${key}: ${serie[key]}`)
 }
-
 for(let key in book){
     console.log(`${key}: ${book[key]}`)
 }
-
 for(let key in pc){
     console.log(`${key}: ${pc[key]}`)
 }
-
+console.log("For Of:")
 let seriesArray = [
     "House of the Dragon",
     "Game of Thrones"
@@ -127,8 +124,6 @@ let pcsArray = [
     "Dell XPS 15",
     "MacBook Pro"
 ];
-
-console.log("For Of:")
 for(let serie of seriesArray){
     console.log(serie)
 }
@@ -140,4 +135,3 @@ for(let book of booksArray){
 for(let key of pcsArray){
     console.log(pc)
 }
-
