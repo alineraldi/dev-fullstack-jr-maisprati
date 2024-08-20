@@ -1,0 +1,1 @@
+// This lesson was dedicated to providing an explanation of the means of evaluation this course will have.
