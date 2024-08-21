@@ -39,19 +39,31 @@ class DoublyLinkedList{
         let newNode = new Node(data)
         let current = this.head
         let previous
-        if (index === 0){
-            newNode.next = this.head
+        if (index === 0){ // if you want to add an element to the first position
+            if(this.head === null){ // if the first position is empty
             this.head = newNode
-        } else {
-            for(let i = 0; i < index; i++){
-                previous = current
+            this.tail = newNode
+            } else { // if the first position isn't empty
+                newNode.next = this.head
+                this.head.previous = newNode
+                this.head = newNode
+            }
+        } else if(index === this.size){ // if you want to add an element to the last position
+            this.tail.next = newNode
+            newNode.previous = this.tail
+            this.tail = newNode
+        } else { // if you want to add elements to other positions
+            for(let i= 0 ; i < index; i++){
                 current = current.next
             }
-
             newNode.next = current
-            previous.next = newNode
+            newNode.previous = current.previous
+
+            current.previous.next = newNode
+            current.previous = newNode
         }
 
         this.size++
     }
 }
+
