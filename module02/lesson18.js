@@ -1,0 +1,2 @@
+// This lesson was dedicated for installing and learning a bit about Git and Github. 
+// I already know how to use these tools, I only took a few notes on my notebook, didn't feel the need to write anything here.
