@@ -190,3 +190,147 @@ clients.forEach(k => {
 console.log(`There are ${counter} clients over 30 years old.`)
 
 //COMBINING STRUCTURES
+// 10. Creating Reports with Objects and Arrays
+// Create an array of sales objects, where each object contains product, quantity, and value.
+// Use forEach to calculate the total sales value of all products.
+
+const salesObjects = [
+    { product: 'Laptop', quantity: 2, value: 1200 },
+    { product: 'Phone', quantity: 5, value: 600 },
+    { product: 'Tablet', quantity: 3, value: 300 },
+    { product: 'Monitor', quantity: 4, value: 200 }
+];
+salesObjects.forEach(k => {
+    let totalSales = k.value * k.quantity
+    console.log(`Product: ${k.product} - Total sales: ${totalSales}}`)
+})
+
+// 11. Grouping Elements with forEach
+// Create an array of order objects, where each order has customer, product, and quantity. 
+// Use forEach to create an object that groups the total quantity of products by customer.
+
+const orders = [
+    { customer: 'Alice', product: 'Laptop', quantity: 1 },
+    { customer: 'Bob', product: 'Phone', quantity: 2 },
+    { customer: 'Paula', product: 'Tablet', quantity: 1 },
+    { customer: 'Charlie', product: 'Monitor', quantity: 3 },
+    { customer: 'Bob', product: 'Laptop', quantity: 1 }
+];
+
+let productsPerCustomer = []
+orders.forEach(k => {
+    productsPerCustomer = productsPerCustomer + [` ${k.customer} - ${k.quantity} -`]
+})
+
+console.log(`Total products per customer: ${productsPerCustomer}`)
+
+// 12. Updating an Array of Objects
+// Create an array of stock objects, where each object has product, quantity, and minimum. 
+// Use forEach to update the quantity of products that are below the minimum by doubling their quantities.
+
+const stock = [
+    { product: 'Laptop', quantity: 5, minimum: 10 },
+    { product: 'Phone', quantity: 15, minimum: 10 },
+    { product: 'Tablet', quantity: 8, minimum: 12 },
+    { product: 'Monitor', quantity: 3, minimum: 5 }
+];
+
+stock.forEach(k => {
+    if(k.quantity <= k.minimum){
+        k.quantity = k.quantity * 2
+    }
+})
+console.log(stock)
+
+// 13. Implementing a Shopping Cart
+// Create a cart object with a property items, which is an array of objects. 
+// Each object inside items should represent a product in the cart, with name, quantity, and unitPrice. 
+// Use forEach to calculate the total value of the cart.
+
+const cart = {
+    items: [
+        { name: 'iPhone', quantity: 1, unitPrice: 1200 },
+        { name: 'Samsung Galaxy Y', quantity: 2, unitPrice: 600 },
+        { name: 'Sony Ericsson', quantity: 1, unitPrice: 300 },
+        { name: 'Motorola V3', quantity: 2, unitPrice: 200 }
+    ]
+};
+
+let totalCart = 0
+cart.items.forEach(k => {
+    k.finalPrice = k.unitPrice * k.quantity
+    totalCart += k.finalPrice
+})
+console.log(`Total cart: ${totalCart}`)
+
+// 14. Manipulating Complex Objects
+// Create a company object with a property departments, which is an array of objects. 
+// Each department has a name and a list of employees. 
+// Use for...in and for...of to iterate over the departments and their employees, 
+// displaying each employee's name along with the department to which they belong.
+
+const pixarCompany = {
+    departments: [
+        {
+            name: 'Illustration',
+            employees: [
+                { name: 'Alice', role: 'Concept Artist' },
+                { name: 'Bob', role: 'Storyboard Artist' }
+            ]
+        },
+        {
+            name: '3D Animation',
+            employees: [
+                { name: 'Charlie', role: 'Character Animator' },
+                { name: 'Diana', role: 'Technical Director' }
+            ]
+        },
+        {
+            name: 'Screenplay',
+            employees: [
+                { name: 'Eve', role: 'Screenwriter' },
+                { name: 'Frank', role: 'Dialogue Writer' }
+            ]
+        }
+    ]
+};
+
+for(let key in pixarCompany){
+    if (key === "departments"){
+        for(let department of pixarCompany[key]){
+            console.log(`-------- Department: ${department.name}`)
+            for(let employee of department.employees){
+                console.log(`-- Employee: ${employee.name}`)
+            }
+    }
+}
+}
+
+// 15. Filtering and Summing Values
+// Create an array of transaction objects, where each transaction has a type (either 'income' or 'expense') and a value. 
+// Use forEach to calculate the final balance by adding incomes and subtracting expenses.
+const transactions = [
+    { type: 'income', value: 500 },
+    { type: 'expense', value: 150 },
+    { type: 'income', value: 200 },
+    { type: 'expense', value: 50 },
+    { type: 'income', value: 100 }
+];
+
+let finalBalance = 0
+incomeCounter = 0
+expenseCounter = 0
+transactions.forEach(k => {
+    if(k.type === 'income'){
+        finalBalance += k.value
+        incomeCounter += 1
+    } else {
+        finalBalance -= k.value
+        expenseCounter += 1
+        
+    }
+})
+
+console.log(`Final balance: $${finalBalance}. ${incomeCounter} income transactions. ${expenseCounter} expense transactions.`)
+
+/// I did it! :D I feel wiser.
