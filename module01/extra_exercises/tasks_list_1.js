@@ -15,7 +15,7 @@
 
 // How to Run the Exercises
 // Use Node.js. In the terminal, execute:
-// node tasks_list_1js
+// node tasks_list_1.js
 
 const prompt = require("prompt-sync")()
 /* 1. Write a program that receives a number and checks whether it is even or odd using an if control structure */
