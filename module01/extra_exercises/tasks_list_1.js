@@ -1,3 +1,22 @@
+// Before getting started, make sure you have the following prerequisites installed on your machine:
+
+// > Node.js (version 14.x or higher)
+// > npm (usually installed with Node.js)
+// > Visual Studio Code (VSCode) or any other text editor of your choice
+
+// Cloning the Repository
+// To clone this repository to your local machine, run the following command in your terminal:
+
+// git clone https://github.com/alineraldi/dev-fullstack-jr-maisprati
+// After cloning the repository, navigate to the project directory:
+// cd module01
+// cd extra_exercises
+
+
+// How to Run the Exercises
+// Use Node.js. In the terminal, execute:
+// node tasks_list_1js
+
 const prompt = require("prompt-sync")()
 /* 1. Write a program that receives a number and checks whether it is even or odd using an if control structure */
 let userEntry = Number(prompt("Type a number and I'll check if it's even or odd: "))

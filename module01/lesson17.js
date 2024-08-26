@@ -64,7 +64,7 @@ class DoublyLinkedList{
         this.size++
     }
 
-    // LESSON17 STARTS HERE ↓
+    ///////////////// LESSON17 STARTS HERE ↓ \\\\\\\\\\\\\\\\\\
 
     removeAt(index) {
         if (index < 0 || index >= this.size){
@@ -122,12 +122,52 @@ class DoublyLinkedList{
 
         console.log(result.join("  <=>  "))
     }
+
+    wipeFunction(){
+        let current = this.head
+        if(this.head === null){  // If the list is empty...
+            console.log("The list is already empty.") // ...make this new node the head of the list
+        } else {
+            for(let i = 0; i < this.size; i++){
+                this.head = null
+                this.tail = null
+                this.size = 0
+                console.log("This list has been wiped clean.")
+            }
+        }
+    }
+
+    reverse(){ /// This was the most difficult one for me
+        let current = this.head
+        if(this.head === null){  // If the list is empty...
+            console.log("The list is already empty.") // ...make this new node the head of the list
+            let current = this.head;
+            let temp = null;
+        
+            // Swap the next and previous pointers for each node
+            while (current !== null) {
+                // Swap the next and previous pointers
+                temp = current.next;
+                current.next = current.previous;
+                current.previous = temp;
+                
+                // Move to the next node in the original list
+                current = current.previous;
+            }
+            
+            // After the loop, update the head and tail
+            temp = this.head;
+            this.head = this.tail;
+            this.tail = temp;
+        }
+}
 }
 
 
 
 
-let list = new DoublyLinkedList() 
+let list = new DoublyLinkedList() // Declaring the variable
+// Testing functions
 list.add("Element 0")
 list.add("Element 1")
 list.add("Element 2")
@@ -138,3 +178,6 @@ list.getData(2)
 list.printFunction()
 list.removeAt(0)
 list.printFunction()
+
+// Implement a method to wipe ou the list, remove all the nodes. WipeFunction: check
+// Implement a method to reverse the order of the elements in a list.
