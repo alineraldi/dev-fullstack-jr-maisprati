@@ -5,6 +5,6 @@
 // Example: 76801d5e1e71f8fa36feb4ff42c9157ac397fe5a
 
 // git cat-file-t (76801d5e1e71f8fa36feb4ff42c9157ac397fe5a - example hash) - shows the type of hash
-// git cat-file-p (76801d5e1e71f8fa36feb4ff42c9157ac397fe5a - hash example) - shows the properties of that hash
+// git cat-file-p (76801dSSS5e1e71f8fa36feb4ff42c9157ac397fe5a - hash example) - shows the properties of that hash
 // git reflog - tracks the history of all changes, allowing you to recover commits
 
