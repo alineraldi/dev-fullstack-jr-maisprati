@@ -33,5 +33,3 @@
 
 // 2) Lightweight Tags - Simple pointers
 // git tag v1.0 ::: example
-
-//
