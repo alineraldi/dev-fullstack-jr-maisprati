@@ -1,0 +1,183 @@
+<!-- This code may seem similar to Lesson 21's code, but it isn't. In here, we stylize the html page a little bit more, by adding style -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Main Page</title>
+
+        <meta charset="UTF-08"/>
+        <meta name="keywords" content="Web Development, HTML, CSS, Javascript"/>
+        <meta name="author" content="Aline Raldi Franco"/>
+        <meta name="description" content="This website's all about introductory web development studies."/>
+
+        <style>
+            h1 {
+                color: coral
+            }
+
+            a {
+                font-weight: bold;
+                color: brown;
+                background-color: lightblue;
+                border: 2px solid;
+            }
+
+
+            a:hover {
+                color: aquamarine;
+                text-decoration: none;
+                background-color:#6d6d;
+            }
+
+            p {
+                background-color: black;
+                color: white;
+                text-align: justify;
+                letter-spacing: 2px;
+
+            }
+
+            ul {
+                list-style-type: none;
+                border: 1px solid red;
+                margin-bottom: 30px;
+            }
+
+            li {
+                margin-bottom: 5px;
+                border: 1px solid coral;
+            }
+
+            ol {
+                list-style-type: upper-latin;
+                border: 1px solid black;
+                padding-top:10px;
+            }
+
+            table {
+                border: 2px solid coral;
+                width: 100%;
+            }
+
+            th, td {
+                border: 1px solid lime;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav>
+            <a href="https://google.com">Main Page</a>
+            <a href="aboutus.html">About us</a>
+        </nav>
+        <hr>
+
+        <header>
+
+            <h1>Welcome to our page</h1>
+            <h2 style ="color: rgb(127, 31, 31)">Welcome to our page</h2>
+            <h3>Welcome to our page</h3>
+
+            <hr>
+
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias vitae provident illum obcaecati ullam quae qui necessitatibus, quaerat reiciendis optio. Commodi rerum placeat dignissimos quis, maiores ut dolor quos esse!</p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae eligendi aliquam sequi eaque atque. Ipsa, rerum similique facilis, magni in repudiandae blanditiis incidunt aut hic porro illo explicabo debitis.</p>
+                <p>Chemical formula: H<sub>2</sub>0 - Power example: x<sup>2</sup></p>
+            </section>
+
+            <hr>
+            
+            <section>
+                <p>An <abbr title="Application Programming Interface">API</abbr> allows many softwares to communicate among eachother.</p>
+                <blockquote cite="https://google.com">Google is a desktop navigatior with excellent performance.</blockquote>
+
+                <p><cite>The Starry Night</cite> by Vincent Van Gogh. Painted in 1889.</p>
+                <p>The famous quote by Shakespeare's Hamlet - <q>To be or not to be!</q></p>
+                <p>This text has an <strong>emphasis</strong> on the word emphasis.</p>
+                <p>This text has an <u>emphasis</u> on the word emphasis.</p>
+                <p>This text has an <i>emphasis</i> on the word emphasis.</p>
+                <p>This text has an <s>incorrect</s> word.</p>
+            </section>
+
+            <hr>
+
+            <section>
+                <h3>Navigation</h3>
+                <ul>
+                    <li>Home</li>
+                    <li>Main Page</li>
+                    <li>About Us</li>
+                    <li>Newsletter</li>
+                </ul>
+
+                <h2>FAQ</h2>
+                <ol>
+                    <li>What is HTML?</li>
+                    <li>How does CSS work?</li>
+                    <li>What is JS for?</li>
+                </ol>
+            </section>
+
+            <hr>
+
+            <section>
+                <table border="1" width="100%">
+                    <tr>
+                        <th>Product</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>Laptop</td>
+                        <td>Gamer laptop</td>
+                        <td>R$ 1000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Playstation 5</td>
+                        <td>Sony console</td>
+                        <td>R$ 1200</td>
+                    </tr>
+
+                    <tr>
+                        <td>Bike</td>
+                        <td>Fantastic Caloi 10</td>
+                        <td>R$ 300</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="3">Total: R$ 2.500</td>
+                    </tr>
+
+                </table>
+            </section>
+
+            <section>
+                <h2>Login</h2>
+                <form>
+                    <label for="username">User name:</label>
+                    <input type="text">
+                    <br>
+                    <hr>
+                    <label for="password">Password:</label>
+                    <input type="password">
+                </form>
+            </section>
+
+            <hr>
+
+            <footer>
+                <h2>Footer</h2>
+                &lt;Learning HTML-&gt;
+                <p>Developed by Aline &copy;</p>
+            </footer>
+
+        </header>
+    </body>
+
+    <!-- Exercise: Create an html file, with head, header, nav, section, footer. Include paragraphs, lists and tables. Modify the paragraph font.
+     
+    Create a user registration form.-->
+</html>
