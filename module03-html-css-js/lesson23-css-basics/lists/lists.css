@@ -1,0 +1,46 @@
+* {
+}
+
+body {
+    
+    font-family:'Courier New', Courier, monospace;
+    line-height: 1.5rem;
+    margin: 20px;
+    padding: 0;;
+}
+
+dl {
+    margin: 20px;
+    padding: 10px;
+    background-color: lightseagreen;
+    border-left: 5px solid teal;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: teal
+}
+
+dd {
+    font-style: italic;
+    color: lightgreen;
+}
+
+p {
+    color: pink;
+}
+
+.unorderedList li {
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid teal;
+    background-color: pink;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ol > ul {
+    color: lightcyan;
+    background-color: lightseagreen;
+}

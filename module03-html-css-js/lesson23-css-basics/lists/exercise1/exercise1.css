@@ -1,0 +1,20 @@
+#content {
+    width: 100%
+}
+
+h1 {
+    color: darkblue;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+li {
+    color: darkblue;
+    background-color: lightgray;
+    border-radius:5px;
+    text-align: center;
+}
+
+li:hover {
+    background-color: darkgray;
+}
