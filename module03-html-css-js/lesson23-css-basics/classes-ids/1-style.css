@@ -1,0 +1,50 @@
+#header {
+    border: 1px solid limegreen;
+    color: lightpink;
+    background-color: rgb(26, 49, 48);
+    padding: 20px;
+    text-align: center;
+}
+
+#content {
+    background-color: lightgreen;
+    border: 1px solid red;
+    margin: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.highlightedParagraphs {
+    color: purple;
+    padding: 10px;
+    border-left: 4px solid #fbc02d;
+}
+
+.button{
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-click-here {
+    background-color: #ff94d2;
+    color: darkorchid;
+    border-radius: 4px;
+}
+
+
+.button-find-out {
+    background-color: darkorchid;
+    color: #ff94d2;
+
+}
+
+.button-click-here:hover {
+    background-color: #ff94d2;
+    color: #9bff94;
+}
+
+.button-find-out:hover {
+    background-color: darkorchid;
+    color: #9bff94;
+}
