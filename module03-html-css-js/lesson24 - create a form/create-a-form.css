@@ -1,0 +1,31 @@
+form {
+    padding: 5px;
+    border: 2px solid coral;
+    background-color: lightgreen;
+    border-radius: 10px;
+    font-style: italic;
+    text-align: left;
+}
+
+input, textarea, select {
+    text-align: right;
+}
+
+input:focus, textarea:focus, select:focus{
+    color: coral;
+    border: 2px solid yellow;
+    outline: none
+}
+
+button {
+    box-shadow: 3px 1px 0px yellowgreen;
+    transition: box-shadow 1s ease;
+}
+
+button:hover {
+    box-shadow: -2px -1px 0px coral;
+}
+
+button:active {
+    transform:translateY(2px);
+}

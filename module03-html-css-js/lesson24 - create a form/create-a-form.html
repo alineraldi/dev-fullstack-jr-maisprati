@@ -1,0 +1,90 @@
+<!-- Formulário de Contato com Validação
+
+Objetivo: Criar um formulário de contato,com validação.
+
+Instruções:
+Crie um formulário com os seguintes campos:
+Nome (campo obrigatório)
+E-mail (campo obrigatório a deve validar formato de e-mail)
+Mensagem (campo obrigatório)
+Telefone (campo opcional)
+Assunto (campo de seleção com 3 opções: Dúvida, Suporte, Feedback)
+Checkbox para aceitar os Termos de Uso (obrigatório)
+
+Inclua um botão de envio que só deve ser habilitado se todos os campos obrigatórios foren preenchidos corretamente. Adicione um placeholder para cada campo.
+Utilize HTMLS para adicionar validação dos campos obrigatórios e padrões de validação (como o campo de e-mail e número de telefone).
+
+CSS- Estilização e Responsividade:
+Estilização:
+Adicione uma borda ao redor do formulário con cantos arredondados.
+Utilize espaçamento adequado entre os campos. Altere a cor de fundo e o estilo da fonte.
+Aplique foco (focus) nos campos, destacando-os quando o usuário estiver interagindo com eles.
+Estilize o botão de envio para parecer un botão moderno (con sombras, efelto hover, e animação suave quando pressionado). Alinhe os rótulos (<label>) dos campos à esquerda e os inputs à direita, criando uma boa legibilidade.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form With Validation</title>
+    <link rel="stylesheet" href="create-a-form.css">  
+</head>
+<body>
+    <div id="header">
+        <h1>Contact Form With Validation</h1>
+        <p>Instructions: Create a form with the following fields:</p>
+
+            <ul>
+                <li>Name (required field)</li>
+                <li>Email (required field and must validate the email format)</li>
+                <li>Message (required field)</li>
+                <li>Phone (optional field)</li>
+                <li>Subject (dropdown field with 3 options: Question, Support, Feedback)</li>
+                <li>Checkbox to accept the Terms of Use (required)</li>
+            </ul>
+            <p>Include a submit button that should only be enabled if all required fields are filled out correctly. Add a placeholder for each field. Use HTML5 to add validation for required fields and patterns (such as email and phone number fields).</p>           
+            <p>CSS - Styling and Responsiveness:</p>
+            
+            <ul>
+               <li>Add a border around the form with rounded corners.</li> 
+               <li>Use proper spacing between the fields. Change the background color and font style.</li>
+               <li>Apply focus to the fields, highlighting them when the user interacts with them.</li>
+               <li>Style the submit button to look like a modern button (with shadows, hover effect, and smooth animation when pressed).</li>
+               <li>Align the labels to the left and the input fields to the right to enhance readability.</li>
+            </ul> 
+        </div>
+
+    <div id="content">
+        <h2>Contact</h2>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <br> <br>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <br><br>
+                    <label for="message">Message: </label>
+                    <textarea name="message" placeholder="Enter your message" required></textarea>
+                    <br><br>
+                    <label for="phone">Phone number:</label>
+                    <input type="tel" name="phone number" placeholder="Enter your phone number">
+                    <br><br>
+                    <label for="subject">Subject:</label>
+                    <select name="subject">
+                    <option value="" disabled selected>Select subject</option>
+                    <option value="question">Question</option>
+                    <option value="question">Support</option>
+                    <option value="question">Feedback</option>
+                    <br>
+                    <br>
+                    <input type="checkbox" name="terms" required> I accept the terms of use
+                    <br><br>
+                    <button type="submit" >Submit</button>
+                </form>
+    </div>
+
+    <div id="footer">
+        <p class="highlightedParagraphs">&copy;2024 My Website. All rights reserved.</p>
+    </div>
+</body>
+</html>
