@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Block, Inline-Block</title>
+
+    <style>
+        /* Example of elements with display block */
+        .block {
+            display: block; /* The element takes up the full width available and starts on a new line */
+            border: 1px solid blue; /* Adds a blue border around the element */
+            padding: 10px; /* Adds internal space around the content */
+            margin-bottom: 10px; /* Adds space below the element */
+        }
+
+        /* Example of elements with display inline */
+        .inline {
+            display: inline; /* The element takes up only the width of its content and does not force a new line */
+            border: 1px solid green; /* Adds a green border around the element */
+            padding: 5px; /* Adds internal space around the content */
+        }
+
+        /* Example of elements with display inline-block */
+        .inline-block {
+            display: inline-block; /* The element takes up only the width of its content but allows setting width and height */
+            border: 1px solid red; /* Adds a red border around the element */
+            padding: 10px; /* Adds internal space around the content */
+            margin-right: 10px; /* Adds space to the right of the element */
+        }
+
+        /* Adds some additional styling for the page */
+        body {
+            font-family: Arial, sans-serif; /* Sets the font for the page */
+            line-height: 1.5; /* Sets line spacing for better readability */
+        }
+    </style>
+</head>
+<body>
+    <!-- Block elements -->
+    <div class="block">This is a block element</div>
+    <!-- The <div> is a block element that takes up the full width available and starts on a new line -->
+
+    <p class="block">This is a block element</p>
+    <!-- The <p> (paragraph) is a block element that also takes up the full width available and starts on a new line -->
+
+    <h1 class="block">This is a block element</h1>
+    <!-- The <h1> (heading) is a block element that takes up the full width available and starts on a new line -->
+
+    <!-- Inline elements -->
+    <span class="inline">This is an inline element</span>
+    <!-- The <span> is an inline element that takes up only the width of its content and does not force a new line -->
+
+    <a href="#" class="inline">This is an inline link</a>
+    <!-- The <a> (link) is an inline element that takes up only the width of its content and does not force a new line -->
+
+    <strong class="inline">This is an inline element</strong>
+    <!-- The <strong> is an inline element that takes up only the width of its content and does not force a new line -->
+
+    <!-- Inline-block elements -->
+    <span class="inline-block">This is an inline-block element</span>
+    <!-- The <span> with display inline-block combines block and inline characteristics, allowing width and height to be set without forcing a new line -->
+
+    <span class="inline-block">Another inline-block element</span>
+    <!-- Another <span> with display inline-block to show how multiple inline-block elements can be aligned horizontally -->
+</body>
+</html>
