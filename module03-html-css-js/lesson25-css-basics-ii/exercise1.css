@@ -1,0 +1,75 @@
+/* Stylize the form so:
+ The Send button is highlighted when hovered over.
+ The form has a width of 400px and is centralized on the screen.
+ 
+ Tip: Use margin, padding and hover to improve styling.*/
+
+ body {
+    background-color: #f3defc;
+ }
+
+ form {
+    max-width: 400px;
+    border: 1px solid #ccc;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #b28bd4;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: palevioletred
+}
+
+label {
+    color: white;
+    margin-top: 10p;
+    font-weight: bold;
+    display: block;
+}
+
+.inline-label{
+    display: inline;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+
+}
+
+fieldset {
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+input[type=checkbox] {
+    width: auto;
+    margin-right: 10px;
+}
+

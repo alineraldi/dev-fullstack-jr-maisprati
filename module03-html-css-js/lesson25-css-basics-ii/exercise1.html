@@ -1,0 +1,58 @@
+<!-- Create a form structure for an e-commerce website. 
+ The form must contain the following:
+ 
+ Full name
+ E-mail address
+ Password
+ Select your country
+ Gender
+ Accept the term of service
+ 
+ Tip: Use <form>, <input>, <select> and <textarea>.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up to MagicStore</title>
+
+    <link rel="stylesheet" href="exercise1.css">
+</head>
+<body>
+    <h1>MagicStore • Sign up</h1>
+    <form>
+        <label for="name">What's your full name?</label>
+        <input type="text" placeholder="Write it here">
+
+        <label for="email">What about your e-mail?</label>
+        <input type="email" placeholder="Hope you have one!">
+
+        <label for="password">Please, create a password:</label>
+        <input type="password" placeholder="Use numbers, letters, @#!">
+        
+        <label for="country">Where do you live?</label>
+        <select name="country" id="country">
+            <option value=''></option>
+            <option value="country">Congo</option>
+            <option value="country">Colombia</option>
+            <option value="country">Chile</option>
+            <option value="country">Croatia</option>
+        </select>
+
+        <label for="gender" id="gender">What gender do you identify with?</label>
+        <select name="gender" id="gender">
+            <option value=''></option>
+            <option value='gender'>Female</option>
+            <option value='gender'>Male</option>
+            <option value='gender'>Non-binary</option>
+            <option value='gender'>Other</option>
+        </select>
+
+        <label class="inline-label"  label for="terms" id="terms">Do you accept the <u>Terms of Service?</u>
+        <input type="checkbox" id="terms" name="terms"></label>
+
+        <button>Sign up</button>
+    </form>
+</body>
+</html>
