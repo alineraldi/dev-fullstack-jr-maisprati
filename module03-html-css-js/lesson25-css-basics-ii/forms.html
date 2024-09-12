@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <form>
+        <h1>Sign up</h1>
+
+        <label for="name">Full name:</label> <!-- The input 'id' -->
+        <input type="text" id="name" name="name">
+
+        <label for="email">E-mail:</label> <!-- The input 'id' -->
+        <input type="email" id="email" name="email" placeholder="yourEmail@gmail.com">
+
+        <label for="password">Password:</label> <!-- The input 'id' -->
+        <input type="password" id="password" name="password">
+
+        <label for="confirm password">Confirm password:</label> <!-- The input 'id' -->
+        <input type="password" id="confirm password" name="confirm password">
+
+        <label for="gender">Gender:</label> <!-- The input 'id' -->
+        <select name="gender" id="gender">
+            <option value=""></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+
+        <label for="birthday">Date of birth:</label>
+        <input type="date" id="birthday" name="birthday">
+        
+
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+            <option value=""></option>
+            <option value="Brazil">Brazil</option>
+            <option value="Argentina">Argentina</option>
+            <option value="Uruguay">Uruguay</option>
+        </select>
+
+        <br>
+
+        <label for="state">State:</label>
+        <select name="state" id="state">
+            <option value=""></option>
+            <option value="Amapá">Amapá</option>
+            <option value="Santa Catarina">Santa Catarina</option>
+            <option value="Mato Grosso">Mato Grosso</option>
+        </select>
+
+        <fieldset>
+            <legend>Communication</legend>
+            <input type="checkbox" id="email-newsletter" name="email-newsletter">
+            <label class="inline-label" label for="email-newsletter">Sign up to our newsletter</label>
+            <br>
+            <input type="checkbox" id="email-preferences" name="email-preferences">
+            <label class="inline-label" for="email-preferences">Receive updates through e-mail</label>
+        </fieldset>
+
+        <label class="inline-label" for="profile-picture">Profile picture:</label>
+        <input type="file" name="profile-picture" id="profile-picture">
+        <br>
+        <button type="submit">Sign up</button>
+    </form>
+    
+</body>
+</html>
