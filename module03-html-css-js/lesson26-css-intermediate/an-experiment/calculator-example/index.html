@@ -1,0 +1,83 @@
+<!--Self-Proposed Exercise: Simple Currency Converter
+After completing the calculator project in the basic CSS, HTML, and JavaScript class, I decided to challenge myself with a self-proposed exercise: 
+Creating a Simple Currency Converter. 
+This project will allow me to further apply what I’ve learned, while also providing a small yet practical challenge that can be added to my portfolio.
+
+Description of the Exercise: Simple Currency Converter
+Features:
+Simple Interface: The user can input a value in one currency (e.g., USD) and convert it to another currency (e.g., EUR).
+Currency Selection: The user will choose the currencies for conversion from a dropdown list (e.g., USD, EUR, BRL).
+Conversion Rate: Some fixed exchange rates will be defined in the code (no need to connect to an API).
+Calculation: By clicking a button, the value will be converted based on the predefined exchange rate.
+Display of Result: The converted amount will be displayed in a designated area on the page.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Currency Converter</h1>
+    </header>
+        <form id="form" name="form">
+
+            <label for="input" name="input"></label>
+            <input type="number" id="amount" step="0.01" min="0" placeholder="Enter amount">
+
+            <select class="select" id="from" name="from">
+            <option value="" disabled selected>From</option>
+            <option value="australia">🇦🇺 Australia (A$)</option>
+            <option value="brazil">🇧🇷 Brazil (R$)</option>
+            <option value="canada">🇨🇦 Canada (C$)</option>
+            <option value="china">🇨🇳 China (¥)</option>
+            <option value="egypt">🇪🇬 Egypt (E£)</option>
+            <option value="france">🇫🇷 France (€)</option>
+            <option value="ghana">🇬🇭 Ghana (GH₵)</option>
+            <option value="south_africa">🇿🇦 South Africa (R)</option>
+            <option value="south_korea">🇰🇷 South Korea (₩)</option>
+            <option value="india">🇮🇳 India (₹)</option>
+            <option value="italy">🇮🇹 Italy (€)</option>
+            <option value="japan">🇯🇵 Japan (¥)</option>
+            <option value="kenya">🇰🇪 Kenya (KSh)</option>
+            <option value="morocco">🇲🇦 Morocco (MAD)</option>
+            <option value="mexico">🇲🇽 Mexico (MX$)</option>
+            <option value="nigeria">🇳🇬 Nigeria (₦)</option>
+            <option value="tunisia">🇹🇳 Tunisia (TND)</option>
+            <option value="united_kingdom">🇬🇧 United Kingdom (£)</option>
+            <option value="united_states">🇺🇸 United States ($)</option>
+            <option value="germany">🇩🇪 Germany (€)</option>
+            </select>
+
+            <div id="transfer-img">💱</div>
+            <select class="select" id="to" name="to">
+                <option value="" disabled selected>To</option>
+                <option value="australia">🇦🇺 Australia (A$)</option>
+                <option value="brazil">🇧🇷 Brazil (R$)</option>
+                <option value="canada">🇨🇦 Canada (C$)</option>
+                <option value="china">🇨🇳 China (¥)</option>
+                <option value="egypt">🇪🇬 Egypt (E£)</option>
+                <option value="france">🇫🇷 France (€)</option>
+                <option value="ghana">🇬🇭 Ghana (GH₵)</option>
+                <option value="south_africa">🇿🇦 South Africa (R)</option>
+                <option value="south_korea">🇰🇷 South Korea (₩)</option>
+                <option value="india">🇮🇳 India (₹)</option>
+                <option value="italy">🇮🇹 Italy (€)</option>
+                <option value="japan">🇯🇵 Japan (¥)</option>
+                <option value="kenya">🇰🇪 Kenya (KSh)</option>
+                <option value="morocco">🇲🇦 Morocco (MAD)</option>
+                <option value="mexico">🇲🇽 Mexico (MX$)</option>
+                <option value="nigeria">🇳🇬 Nigeria (₦)</option>
+                <option value="tunisia">🇹🇳 Tunisia (TND)</option>
+                <option value="united_kingdom">🇬🇧 United Kingdom (£)</option>
+                <option value="united_states">🇺🇸 United States ($)</option>
+                <option value="germany">🇩🇪 Germany (€)</option>
+                </select>
+            <button type="convert" id="convert-btn">Convert</button>
+        </form>
+</body>
+</html>
