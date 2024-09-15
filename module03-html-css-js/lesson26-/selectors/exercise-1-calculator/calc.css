@@ -1,0 +1,40 @@
+body {
+    background-color: lightpink;
+}
+
+#container {
+    background-color: rgb(143, 197, 183);
+    width: 20em;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+    border-radius: 2px;
+}
+
+#equals{
+    background-color: rgb(147, 244, 147);
+}
+
+input[type="input"]{
+    width: 80%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-size: 1.9em;
+    color: rgb(219, 152, 52);
+    border: 1px solid rgb(245, 186, 227);
+    border-radius: 2px;
+}
+
+button {
+    width: 2em;
+    height: 2em;
+    font-size: 1.9em;
+    margin-bottom: 0.1em;
+    color: rgb(219, 152, 52);
+    border: 1px solid rgb(245, 186, 227);
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color: rgb(250, 221, 237);
+}

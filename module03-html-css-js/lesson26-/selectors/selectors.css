@@ -1,0 +1,40 @@
+div p {
+
+} /* descending selector */
+
+input[type="text"] {
+
+} /* atttibute selector */
+
+ul > li {
+
+} /* direct son selector */
+
+h1 + p {
+    background-color: lightcoral;
+} /* right after selector */
+
+a:visited {
+
+}
+
+a:hover {
+
+}
+
+p::after{
+    content: "P::After";
+    background-color: yellow;
+} /*fixates a patter right after an element */
+
+p::first-letter{
+    background-color: aqua;
+}
+
+p::first-line{
+    font-weight: bold;
+}
+
+li:nth-child(2){
+
+} /* selects the X element of a list */
