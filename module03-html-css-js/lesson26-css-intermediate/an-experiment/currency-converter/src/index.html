@@ -18,6 +18,11 @@ Display of Result: The converted amount will be displayed in a designated area o
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency Converter</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -54,6 +59,7 @@ Display of Result: The converted amount will be displayed in a designated area o
             </select>
 
             <div id="transfer-img">💱</div>
+            
             <select class="select" id="to" name="to">
                 <option value="" disabled selected>To</option>
                 <option value="australia">🇦🇺 Australia (A$)</option>
@@ -77,7 +83,9 @@ Display of Result: The converted amount will be displayed in a designated area o
                 <option value="united_states">🇺🇸 United States ($)</option>
                 <option value="germany">🇩🇪 Germany (€)</option>
                 </select>
+            <div id="btn">
             <button type="convert" id="convert-btn">Convert</button>
+            </div>
         </form>
 </body>
 </html>
