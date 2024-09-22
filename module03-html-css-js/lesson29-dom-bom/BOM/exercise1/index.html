@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1</title>
+    <script>
+        let myWindow
+
+        function alterText() {
+            window.setTimeout(() => {
+                document.write("You've just altered the screen! Nice, huh?")
+            }, 3000) 
+        }
+
+        function setCounter() {
+            let i = 0;
+            const button = document.getElementById('counter-button');
+            button.disabled = true;
+            
+            let j = window.setInterval(() => {
+                i++;
+                button.textContent = i;
+            }, 1000)
+
+        }
+    </script>
+</head>
+<body>
+    <h3>Create two buttons  </h3>
+    <p>The first button must change the text on the page after 3 seconds.
+     <br> The second button must show a counter, incrementing after each second.
+    </p>
+    <button onclick="alterText()">Alter text</button>
+    <button id="counter-button" onclick="setCounter()">Set counter</button>
+</body>
+</html>
+ ;)

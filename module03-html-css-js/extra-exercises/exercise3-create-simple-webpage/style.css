@@ -163,7 +163,7 @@ aside {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: cen;
 }
 
 aside ul {
