@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+#content {
+    background-color: lightgray;
+}
+
+header {
+    background-color: white;
+}
+
+nav {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    padding-right: 2cap;;
+}
+
+#title {
+    display: flex;
+    font-size: 28px;
+    justify-content: center;
+    padding: 1em;
+    font-weight: bold;
+}
+
+
+select[name="type"] {
+    width: 9em;
+}
+
+#description {
+    width: 50%;
+}
+
+td {
+    padding-right: 10em;
+}

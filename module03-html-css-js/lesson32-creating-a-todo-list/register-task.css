@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+
+#content {
+    background-color: lightgray;
+    padding: 20px;
+}
+
+header {
+    background-color: white;
+}
+
+nav {
+    display: flex;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    padding-right: 2em;
+}
+
+#title {
+    display: flex;
+    font-size: 28px;
+    justify-content: center;
+    padding: 1em;
+    font-weight: bold;
+}
+
+
+select[name="type"] {
+    width: 9em;
+}
+
+#description {
+    width: 50%;
+    height: 20%;
+    margin-bottom: 20px;
+}
+
+td {
+    padding-right: 10em;
+}
+
+button {
+    padding: 1em 2em;
+}

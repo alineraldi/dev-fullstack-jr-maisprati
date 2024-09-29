@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Task</title>
+    <link rel="stylesheet" href="register-task.css">
+</head>
+<body>
+    <div id="content">
+    <header>
+        <nav id="nav">
+            <h3>To Do App</h3>
+            <ul id="header">
+                <li>Main</li>
+                <li>Management</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="title">Register Task</div>
+    <form>
+        <input type="number" id="year" name="year" min="1900" max="2100" placeholder="Year" required>
+        <select name="month-input">
+        <option value="" disabled selected>Month</option>
+        <option value="january">January</option>
+        <option value="february">February</option>
+        <option value="march">March</option>
+        <option value="april">April</option>
+        <option value="may">May</option>
+        <option value="june">June</option>
+        <option value="july">July</option>
+        <option value="august">August</option>
+        <option value="september">September</option>
+        <option value="october">October</option>
+        <option value="november">November</option>
+        <option value="december">December</option>
+        </select>
+        <input type="number" id="day-input" name="day-input" placeholder="Day" required>
+        <select name="type">
+            <option value="" disabled selected>Type</option>
+            <option value="studies">Studies</option>
+            <option value="blah">Blah</option>
+            <option value="blah">Blah</option>
+<br>    </select>
+        <input type="text" id="description" name="description" placeholder="Description" required>
+        <button id="save-button" type="submit">Save</button>
+        <p></p>
+    </form>
+    </div>
+</body>
+</html>
