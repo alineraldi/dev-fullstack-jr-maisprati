@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <link rel="stylesheet" href="todolist.css">
+    <link rel="stylesheet" href="register-task.css">
 </head>
 <body>
     <div id="content">
-    <header>
-        <nav id="nav">
-            <h3>To Do App</h3>
-            <ul id="header">
-                <li>Main</li>
-                <li>Management</li>
-            </ul>
-        </nav>
-    </header>
-
+        <header>
+            <nav id="nav">
+                <h3>To Do App</h3>
+                <ul id="header">
+                    <li>Main</li>
+                    <li>Management</li>
+                </ul>
+            </nav>
+        </header>
     <div id="title">To Do List</div>
+    <div id="first-row">
     <form>
         <input type="number" id="year" name="year" min="1900" max="2100" placeholder="Year" required>
         <select name="month-input">
@@ -35,27 +35,29 @@
         <option value="october">October</option>
         <option value="november">November</option>
         <option value="december">December</option>
+        </select>
         <input type="number" id="day-input" name="day-input" placeholder="Day" required>
         <select name="type">
             <option value="" disabled selected>Type</option>
             <option value="studies">Studies</option>
             <option value="blah">Blah</option>
             <option value="blah">Blah</option>
-            <br>
+        </select>
+        </div>
+        <div id="second-row">
         <input type="text" id="description" name="description" placeholder="Description" required>
-        <button id="search-button">Search</button>
-
-        <table class="table">
-            <tr>
-                <div id="columns">
-                <td class="column1">Date</td>
-                <td class="column2">Type</td>
-                <td class="column2">Description</td>
-                </div>
-            </tr>
-        </table>
-        <hr>
+        <button id="save-button" type="submit">Save</button>
+        </div>
     </form>
-    </div>
+    <table class="table">
+        <tr>
+            <div id="columns">
+            <td class="column1">Date</td>
+            <td class="column2">Type</td>
+            <td class="column2">Description</td>
+            </div>
+        </tr>
+    </table>
+    <hr>
 </body>
 </html>

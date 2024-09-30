@@ -1,35 +1,65 @@
 * {
     box-sizing: border-box;
+    background-color: lightgray;
 }
 
 #content {
-    background-color: lightgray;
-    padding: 20px;
+    background-color: white;
+    padding: 2em;
+    border-radius: 1rem;
+    max-width: 45em;
+    margin: auto;
 }
 
 header {
-    background-color: white;
+    margin-bottom: 10px;
 }
 
 nav {
     display: flex;
+    background-color: white;
+}
+
+h3 {
+    background-color: white;
+    padding-left: 1%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 ul {
     display: flex;
     list-style-type: none;
+    background-color: white;
+    align-items: center;
 }
 
 li {
     padding-right: 2em;
+    background-color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#first-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+    width: 100%;
+    align-items: stretch;
+}
+
+#second-row {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1em;
 }
 
 #title {
     display: flex;
-    font-size: 28px;
+    font-size: 2em;
     justify-content: center;
     padding: 1em;
     font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 
@@ -37,16 +67,22 @@ select[name="type"] {
     width: 9em;
 }
 
+
 #description {
-    width: 50%;
-    height: 20%;
-    margin-bottom: 20px;
+    width: 80%;
+    padding: 1%;
+    margin-bottom: 2em;
 }
 
-td {
-    padding-right: 10em;
-}
 
 button {
-    padding: 1em 2em;
+    padding: 0.5em;
+    border-radius: 0.3em;
+    background-color: grey;
+    color: white;
+}
+
+.table {
+    width: 100%;
+    box-sizing: border-box;
 }

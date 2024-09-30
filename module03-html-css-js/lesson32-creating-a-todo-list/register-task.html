@@ -8,17 +8,17 @@
 </head>
 <body>
     <div id="content">
-    <header>
-        <nav id="nav">
-            <h3>To Do App</h3>
-            <ul id="header">
-                <li>Main</li>
-                <li>Management</li>
-            </ul>
-        </nav>
-    </header>
-
+        <header>
+            <nav id="nav">
+                <h3>To Do App</h3>
+                <ul id="header">
+                    <li>Main</li>
+                    <li>Management</li>
+                </ul>
+            </nav>
+        </header>
     <div id="title">Register Task</div>
+    <div id="first-row">
     <form>
         <input type="number" id="year" name="year" min="1900" max="2100" placeholder="Year" required>
         <select name="month-input">
@@ -43,9 +43,11 @@
             <option value="blah">Blah</option>
             <option value="blah">Blah</option>
 <br>    </select>
+        </div>
+        <div id="second-row">
         <input type="text" id="description" name="description" placeholder="Description" required>
         <button id="save-button" type="submit">Save</button>
-        <p></p>
+        </div>
     </form>
     </div>
 </body>
