@@ -1,0 +1,74 @@
+:root {
+    --bg: #1a1e24;
+    --color: #eee;
+}
+
+.wrapper {
+    padding: 0.3rem 0;
+    filter: url('#goo');
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    background: var(--color);
+    color: var(--bg);
+    padding: 1rem;
+    line-height: 1;
+    border-radius: em;
+    justify-content: flex-end;
+    position: relative;
+    min-width: 3em;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.button:before,
+.button:after {
+    width: 3em;
+    height: 2em;
+    position: absolute;
+    content: "";
+    display: inline-block;
+    background-color: #c16474;
+    border-radius: 50%;
+    transition: transform 0.1s ease;
+    transform: scale(0);
+    z-index: -1;
+}
+
+.button:before {
+    top: -25%;
+    left: 20%;
+}
+
+.button:after {
+    bottom: -25%;
+    right: 20%;
+}
+
+.button:hover:before,
+.button:hover:after {
+    transform: none;
+    background-color: #c16474;
+}
+
+.button:hover {
+    background-color: #c16474;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
