@@ -1,3 +1,13 @@
+body {
+    font-family: 'Prometo';
+}
+@font-face {
+    font-family: 'Prometo'; 
+    src: url(fonts/Prometo_Trial_Th.ttf) format('truetype');
+    font-weight:100; 
+    font-style: normal; 
+}
+
 :root {
     --bg: #1a1e24;
     --color: #eee;
@@ -8,19 +18,27 @@
     filter: url('#goo');
 }
 
+.nav-link {
+    color: #9e6226;
+}
+
+.dropdown-item {
+    color: #9e6226;
+}
+
 .button {
     display: inline-block;
     text-align: center;
-    background: var(--color);
-    color: var(--bg);
-    padding: 1rem;
+    background: #d4a375;
+    color: #fff;
+    padding: 0.7rem;
     line-height: 1;
     border-radius: em;
     justify-content: flex-end;
     position: relative;
-    min-width: 3em;
+    min-width: 2em;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .button:before,
@@ -30,7 +48,7 @@
     position: absolute;
     content: "";
     display: inline-block;
-    background-color: #c16474;
+    background-color: #9e6226;
     border-radius: 50%;
     transition: transform 0.1s ease;
     transform: scale(0);
@@ -50,11 +68,22 @@
 .button:hover:before,
 .button:hover:after {
     transform: none;
-    background-color: #c16474;
+    background-color: #9e6226;
 }
 
 .button:hover {
-    background-color: #c16474;
+    background-color: #9e6226;
+    color: #fff;
+}
+
+.search-button {
+    background-image: url(img/search-icon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    width: 2em;
 }
 
 .dropdown {
