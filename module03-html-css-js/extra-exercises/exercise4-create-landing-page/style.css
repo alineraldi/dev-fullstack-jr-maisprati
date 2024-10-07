@@ -1,6 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: 'Prometo';
 }
+
+h2 {
+    font-size: 4rem;
+}
+
+p {
+    font-size: 2rem;
+}
+
+footer {
+    background-color: #d4a375;
+}
+
 @font-face {
     font-family: 'Prometo'; 
     src: url(fonts/Prometo_Trial_Th.ttf) format('truetype');
@@ -104,9 +122,26 @@ body {
 
 
 .swiper-container {
-    height: calc(100vh - 56px);
-    width: 97vw;
+    height: calc(80vh - 56px);
+    overflow: hidden;
 }
+
+.swiper-pagination-bullet {
+    background: #9e6226;
+}
+
+.swiper-button-next {
+    margin-right: 1em;
+    margin-top: 4em;
+    color: #7e7d7d;
+}
+
+.swiper-button-prev {
+    margin-left: 1em;
+    margin-top: 4em;
+    color: #7e7d7d;
+}
+
 
 .swiper-slide {
     background-image: url();
@@ -115,7 +150,6 @@ body {
     overflow: hidden;
     background-size:cover;
     background-repeat: no-repeat;
-    background-position: top;
     align-items: center;
     justify-content: center;
 }
@@ -125,4 +159,21 @@ body {
     height: auto;
     align-items: center;
     object-fit: cover;
+}
+
+
+.about-section {
+    min-height: 100vh;
+}
+
+.services-section {
+    min-height: 100vh;
+}
+
+.feedback-section {
+    min-height: 100vh;
+}
+
+.contact-section {
+    min-height: 100vh;
 }
