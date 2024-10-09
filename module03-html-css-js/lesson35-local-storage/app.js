@@ -1,6 +1,5 @@
 class Task { // Creating a class, an object, as a task
     constructor(year, month, day, type, description) { // The constructor function defines the attributes
-        this.id = null;
         this.year = year; // 'this' refers to the specific instance of the class
         this.month = month;
         this.day = day;
@@ -53,9 +52,7 @@ class Database { // creating a class named 'database' to interact with local Sto
     }
 
     removeTask(id) {
-        let id = localStorage.getItem('id')
         localStorage.removeItem(id); // an easy one: deletes the task associated with the id
-        loadTasks()
     }
 
     searchTasks() { // changed parameter name for clarity
@@ -66,17 +63,20 @@ class Database { // creating a class named 'database' to interact with local Sto
         let description = document.getElementById('description').value;
 
         let tasks = this.loadTasks(); // make sure to call loadTasks() here
-        tasks.forEach((task) => {
-            if (
+        let filteredTasks = tasks.filter((task) => {
+            return (
                 (year === "" || task.year === year) &&
                 (month === "" || task.month === month) &&
                 (day === "" || task.day === day) &&
-                (type === "" || task.type === type) &&
-                (description === "" || task.description.includes(description))
-            ) {
-                console.log(task);
-            }
+                (description === "" || task.description.toLowerCase().includes(description.toLowerCase()))
+            );
         });
+
+        if(filteredTasks.length > 0) {
+            loadTasks(filteredTasks);
+        } else {
+            alert("No tasks found.");
+        };
     }
 
     getNextId() { // creating a method to get the next id in line
@@ -151,4 +151,8 @@ document.addEventListener('DOMContentLoaded', () => { // DOMContentLoaded makes 
     if (document.body.contains(document.getElementById('listTasks'))) { // you need to load the page first
         loadTasks();
     }
+
+    document.getElementById('search-button').addEventListener('click', () => {
+        database.searchTasks();
+    });
 });
