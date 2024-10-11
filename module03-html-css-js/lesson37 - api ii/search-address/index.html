@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address Search</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function getAddress(cep) {
+            cep = cep.replace(/\D/g, '') /// remove any character that's not a number
+
+            if(cep.length !== 8){
+                displayError('Insert a valid ZipCode')
+                return
+            }
+
+            let url = 'https://viacep.com.br/ws/' + cep + '/json/'
+
+            const xmlHttp = new XMLHttpRequest()
+
+            xmlHttp.open('GET', url, true)
+
+            xmlHttp.onreadystatechange = () => {
+                if(xmlHttp.readyState === 4){
+                    if(xmlHttp.status === 200) { // 200 = success
+                        let data = JSON.parse(xmlHttp.responseText)
+
+                        document.getElementById('street').value = data.logradouro;
+                        document.getElementById('neighborhood').value = data.bairro;
+                        document.getElementById('city').value = data.localidade;
+                        document.getElementById('state').value = data.uf;
+                    }
+                }
+            }
+
+            xmlHttp.send();
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Address Search</h1>
+    </header>
+
+    <form>
+        <input type="text" id="cep" class="form-input" name="cep" placeholder="Zip Code" onblur="getAddress(this.value)">
+        <div id="error-message" class="error-message">Please, insert a valid Zip Code.</div>
+        <input type="text" id="street" class="form-input" name="street" placeholder="Street" required>
+        <input type="text" id="neighborhood" class="form-input" name="neighborhood" placeholder="Neighborhood" required>
+        <input type="text" id="city" class="form-input" name="city" placeholder="City" required>
+        <input type="text" id="state" class="form-input" name="state" placeholder="State" required>
+    </form>
+</body>
+</html>

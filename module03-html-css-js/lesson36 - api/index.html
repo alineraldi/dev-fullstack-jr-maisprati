@@ -20,23 +20,5 @@
         <input type="text" id="state" class="form-input" name="state" placeholder="State" required>
     </form>
 
-    <script>
-        function validateZipCode() {
-            const cepInput = document.getElementById('cep')
-            const errorMessage = document.getElementById('error-message')
-            const cepPattern = /^[0-9]{5}-?[0-9]{3}$/; // ^ starts the string, [0-9] indicates the interval of numbers allowed, the number between {} ('{5}') indicates how many numbers we expect, -? indicates we might expect an hifen (maybe not, that's why we have ?), $ ends the string. 
-
-            if(!cepPattern.test(cepInput.value)) { // '.test' returns true if the string corresponds to the pattern expected
-                errorMessage.style.display = 'inline-block';
-            } else {
-                errorMessage.style.display = 'none';
-            }
-        }
-
-        document.getElementById('cep').addEventListener('blur', validateZipCode)
-
-        
-
-    </script>
 </body>
 </html>
