@@ -1,0 +1,227 @@
+<!-- Create a page using semantic tags -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>An example page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        header {
+            background-color: #3433;
+            color: darkgoldenrod;
+            text-align: center;
+            letter-spacing: 0.3rem;
+            padding: 1rem;
+        }
+
+        aside {
+            display: flex;
+            justify-content: center;
+            background-color: darkgoldenrod;
+            color: white;
+            position: container;
+            align-items: center;
+        }
+
+        img {
+            width: 10rem;
+        }
+
+        li {
+            list-style-type: none;
+            padding-bottom: 1rem;
+        }
+
+        h3 {
+            margin: 0 auto;
+            background-color: #616161;
+            text-align: center;
+            color: rgb(241, 212, 44);
+            width: 15rem;
+            padding: 1rem;
+        }
+
+        article {
+            margin: 2rem;
+            padding: 1rem;
+            background-color: rgb(234, 221, 156);
+        }
+
+        .articles {
+            margin: 2rem;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        footer {
+            background-color: #3433;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media(max-width: 480px) {
+            body {
+                width: 65%;
+                font-size: 10px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+            }
+
+            aside {
+                display: flex;
+                flex-direction: row;
+                font-size: 80%;
+                align-items: center;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            nav {
+                flex: 1;
+                width: 30%;
+            }
+
+            img {
+                width: 30%;
+            }
+
+            .articles {
+                flex: 0.5 1 30%;
+                box-sizing: border-box;
+                flex-direction: ;
+                flex-wrap: wrap;
+                margin-right: 2rem;
+                justify-content: center;
+            }
+        }
+
+        @media(max-width: 768px) {
+            body {
+                width: 65%;
+                font-size: 25px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+            }
+
+            aside {
+                display: flex;
+                flex-direction: row;
+                font-size: 80%;
+                align-items: center;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            nav {
+                flex: 1;
+                width: 30%;
+            }
+
+            img {
+                width: 30%;
+            }
+
+            .articles {
+                flex: 0.5 1 30%;
+                box-sizing: border-box;
+                flex-direction: ;
+                flex-wrap: wrap;
+                margin-right: 2rem;
+                justify-content: center;
+            }
+        }
+
+        @media(max-width: 1024px) {
+            body {
+                width: 65%;
+                font-size: 25px;
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+            }
+
+            aside {
+                display: flex;
+                flex-direction: row;
+                font-size: 80%;
+                align-items: center;
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            nav {
+                flex: 1;
+                width: 30%;
+            }
+
+            img {
+                width: 30%;
+            }
+
+            .articles {
+                flex: 0.5 1 30%;
+                box-sizing: border-box;
+                flex-direction: ;
+                flex-wrap: wrap;
+                margin-right: 2rem;
+                justify-content: center;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>An Example Page</h1>
+        <h5>Lorem ipsum dolor sit amet consectetur.</h5>
+    </header>
+    <main class="container">
+        <aside>
+            <nav>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                </ul>
+            </nav>
+
+        <figure>
+            <img src="https://cdn.pixabay.com/photo/2016/02/23/17/42/orange-1218158_1280.png">
+        </figure>
+        </aside>
+
+        <div class="articles">
+            <article>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum deleniti voluptatem enim inventore consequatur laudantium odio perspiciatis quis placeat assumenda?</p>
+            </article>
+
+            <article>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit. Harum deleniti voluptatem enim inventore consequatur <a href="google.com">laudantium</a> odio perspiciatis quis placeat assumenda?</p>
+            </article>
+        </div>
+
+        <footer>
+        <p>@ Lorem ipsum dolor sit amet consectetur.</p>
+        </footer>
+    </main>
+</body>
+</html>
