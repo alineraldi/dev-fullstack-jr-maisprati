@@ -67,22 +67,19 @@
       <div class="swiper-container mt-5 mx-3">
         <div class="swiper-wrapper">
           <div class="swiper-slide" style="background-image: url(https://via.placeholder.com/800x400)";>
-            <h2>buying</h2>
+            <h2>buy artworks</h2>
             </div>
             
             <div class="swiper-slide" style="background-image: url(https://via.placeholder.com/800x400);"> 
-                <h2>selling</h2>
-            </div>
+              <h2>sell your art</h2>
+          </div>
+        </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
         <div class="swiper-pagination"></div>
       </div>
         
-  
-
-
-
     <div id="about" class="about-section mt-5 d-flex justify-content-center align-items-center">
       <div class="container text-center">
         <h2>about us</h2>
@@ -90,37 +87,23 @@
     </div>
   </div>
 
-    <div id="services" class="services-section mt-5">
-        <h2 id="subtitle">services</h2>
-        <div class="services">
-            <h3 class="services">selling</h3>
-            <p class="services">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, adipisci!</p>
-        </div>
+  <div id="services-container" class="services container mt-3 d-flex align-items-center justify-content-center">
+      <h2 class="subtitle">services</h2>
+      <div class="service-item p-3 pl-4 m-1">
+        <h3 class="services-subtitle">buy artworks</h3>
+        <p class="services-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, praesentium?</p>
+    </div>
+    <div class="service-item p-3 m-1">
+      <h3 class="services-subtitle">sell your art</h3>
+      <p class="services-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, praesentium?</p>
+  </div>
+  </div>
 
-        <div class="services"></div>
-            <h3 class="services">buying</h3>
-            <p class="services">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus, adipisci!</p>
-        </div>
-
-    <div id="feedback" class="feedback-section mt-5">
-        <div class="feedback-item"></div>
-            <h2 id="subtitle">feedback</h2>
-            <div class="feedback-item">
-                <div id="feedback-img">
-                <img src="" alt="client-image1">
-                <img src="" alt="sold-artwork1"></div>
-                <h3 class="feedback">person1</h3>
-                <p class="feedback">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora odio quisquam consequatur quasi iusto vero fugiat delectus nemo expedita, aut soluta cum veritatis rerum iure. Harum accusantium dolores atque quod?</p>
-            </div>
-
-            <div class="feedback-item">
-                <div id="feedback-img">
-                <img src="" alt="client-image1">
-                <img src="" alt="soldartwork1">
-                </div>
-                <h3 class="feedback">person2</h3>
-                <p class="feedback">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora odio quisquam consequatur quasi iusto vero fugiat delectus nemo expedita, aut soluta cum veritatis rerum iure. Harum accusantium dolores atque quod?</p>
-        </div>
+    <div id="feedback" class="container mt-5">
+      <h2 class="feedbacks">feedbacks</h2>
+      <div id="feedback-container">
+        
+      </div>
     </div>
 
     <div id="contact" class="contact-section mt-5 text-center">
@@ -162,31 +145,5 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-var Swipes = new Swiper('.swiper-container', {
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-    },
-});
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            const navbarHeight = document.querySelector('.navbar').offsetHeight;
-
-            window.scrollTo({
-                top: targetElement.offsetTop - navbarHeight,
-                behavior: 'smooth' // Para um efeito de rolagem suave
-            });
-        });
-    });
-</script>
+<script src="/module01/html-css-js/extra-exercises/exercise4-create-landing-page/script.js"></script>
 </html>
