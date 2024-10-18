@@ -24,12 +24,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         });
     });
-    // API: Feedback part
+
+// API: Feedback part
 
 let userFeedback = [
-    "The surucuá gallery has provided the best collaborative gallery I've ever seen... Actually, the only one! It's one of the best websites out there, word!",
-    "I absolutely love how easy it is to showcase my artwork here. The community is amazing!",
-    "Surucuá is the perfect platform for artists to connect and collaborate. I've found so much inspiration!"
+    "a galeria surucuá é a melhor galeria colaborativa que já vi... na verdade, a única! é uma das melhores comunidades por aí, sem dúvida!",
+    "eu absolutamente amo como é fácil mostrar minha arte aqui. a comunidade é incrível!",
+    "surucuá é a plataforma perfeita para artistas se conectarem e colaborarem. encontrei tanta inspiração!"
 ]
 
 Promise.all([
@@ -52,6 +53,7 @@ Promise.all([
         dataArray.forEach((data, index) => {
             const user = data.results[0];
             const feedbackCard = document.createElement('div');
+            feedbackCard.dataset.aos = 'fade-up';
             feedbackCard.className = 'feedback-card';
             feedbackCard.innerHTML = `
                 <img src="${user.picture.thumbnail}">
@@ -64,3 +66,7 @@ Promise.all([
     })
     .catch(error => console.error("There was an error loading feedbacks: ", error))
 });
+
+
+// AOS.js
+AOS.init()

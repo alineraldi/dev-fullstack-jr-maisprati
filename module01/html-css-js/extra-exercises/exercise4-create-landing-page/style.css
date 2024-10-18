@@ -125,8 +125,6 @@ footer {
 }
 
 
-
-
 .search-button {
     background-image: url(img/search-icon.png);
     background-size: contain;
@@ -199,14 +197,19 @@ footer {
     min-height: 100vh;
 }
 
-.services-section {
-    min-height: 100vh;
-}
-
-.feedback-section {
-    min-height: 100vh;
-}
-
 .contact-section {
+    min-height: 100vh;
+}
+
+#services-container{
+    min-height: 100vh;
+}
+
+#feedback {
+    min-height: 100vh;
+    max-width: 50%;
+}
+
+.contact {
     min-height: 100vh;
 }
