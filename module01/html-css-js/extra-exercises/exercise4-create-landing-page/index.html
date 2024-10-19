@@ -107,20 +107,24 @@
 
     <div data-aos="flip-up" id="contact" class="contact-section text-center">
         <h2 id="subtitle">contato</h2>
-        <form>
+        <form id="form">
             <label for="name">nome:</label>
-            <input type="text" name="name" placeholder="insira seu nome aqui" required>
+            <input type="text" id="name" placeholder="insira seu nome aqui" required>
+            <div id="nameError" class="error-message"></div>
             <br> <br>
             <label for="email">e-mail:</label>
-            <input type="email" name="email" placeholder="agora, insira seu e-mail" required>
+            <input type="email" id="email" placeholder="agora, insira seu e-mail" required>
+            <div id="emailError" class="error-message"></div>
             <br><br>
             <label for="phone">telefone:</label>
-            <input type="tel" name="phone number" placeholder="e o telefone?">
+            <input type="tel" id="phone" placeholder="e o telefone?" required>
+            <div id="phoneError" class="error-message"></div>
             <br><br>
             <label for="message">mensagem: </label>
-            <textarea name="message" placeholder="escreva sua mensagem pra gente :)" required></textarea>
+            <textarea id="message" placeholder="escreva sua mensagem pra gente :)" required></textarea>
+            <div id="messageError" class="error-message"></div>
             <br><br>
-            <button type="submit" >enviar</button>
+            <button id="sendButton" type="submit">enviar</button>
         </form>
       </div>
 
@@ -140,8 +144,10 @@
         </ul>
       </div>
     </footer>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="/module01/html-css-js/extra-exercises/exercise4-create-landing-page/script.js"></script>

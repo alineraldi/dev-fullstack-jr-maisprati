@@ -1,16 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-var Swipes = new Swiper('.swiper-container', {
-    loop: true,
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
-    pagination: {
-        el: '.swiper-pagination',
-    },
-});
+    var Swipes = new Swiper('.swiper-container', {
+        loop: true,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
@@ -20,32 +21,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
             window.scrollTo({
                 top: targetElement.offsetTop - navbarHeight,
-                behavior: 'smooth' // Para um efeito de rolagem suave
+                behavior: 'smooth' 
             });
         });
     });
 
-// API: Feedback part
+    // API: Feedback part
+    let userFeedback = [
+        "a galeria surucuá é a melhor galeria colaborativa que já vi... na verdade, a única! é uma das melhores comunidades por aí, sem dúvida!",
+        "eu absolutamente amo como é fácil mostrar minha arte aqui. a comunidade é incrível!",
+        "surucuá é a plataforma perfeita para artistas se conectarem e colaborarem. encontrei tanta inspiração!"
+    ];
 
-let userFeedback = [
-    "a galeria surucuá é a melhor galeria colaborativa que já vi... na verdade, a única! é uma das melhores comunidades por aí, sem dúvida!",
-    "eu absolutamente amo como é fácil mostrar minha arte aqui. a comunidade é incrível!",
-    "surucuá é a plataforma perfeita para artistas se conectarem e colaborarem. encontrei tanta inspiração!"
-]
-
-Promise.all([
-    fetch('https://randomuser.me/api/'),
-    fetch('https://randomuser.me/api/'),
-    fetch('https://randomuser.me/api/')
-])
- .then(responses => {
-    responses.forEach(response => {
+    Promise.all([
+        fetch('https://randomuser.me/api/'),
+        fetch('https://randomuser.me/api/'),
+        fetch('https://randomuser.me/api/')
+    ])
+    .then(responses => {
+        responses.forEach(response => {
             if (!response.ok) {
                 throw new Error("Network response wasn't ok.");
             }
         });
         return Promise.all(responses.map(response => response.json()));
- })
+    })
     .then(dataArray => {
         const feedbackContainer = document.getElementById('feedback-container');
         feedbackContainer.innerHTML = '';
@@ -64,9 +64,53 @@ Promise.all([
             feedbackContainer.appendChild(feedbackCard); 
         });
     })
-    .catch(error => console.error("There was an error loading feedbacks: ", error))
-});
+    .catch(error => console.error("houve um erro ao carregar so feedbacks: ", error));
 
+    // AOS.js
+    AOS.init();
 
-// AOS.js
-AOS.init()
+    // Form Validation + EmailJs
+    (function() {
+        emailjs.init("N6ynFm-c4GEH5X61c");
+    })();
+
+    const form = document.getElementById('form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const phoneInput = document.getElementById('phone');
+    const messageInput = document.getElementById('message');
+
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const phoneError = document.getElementById('phoneError');
+    const messageError = document.getElementById('messageError');
+
+    function validateField(field, errorElement, message) {
+        if (field.checkValidity()) {
+            field.style.borderColor = 'black';
+            errorElement.style.display = 'none';
+            return true;
+        } else {
+            field.style.borderColor = 'red';
+            errorElement.textContent = message;
+            errorElement.style.display = 'block';
+            return false;
+        }
+    }
+
+    nameInput.addEventListener('blur', () => validateField(nameInput, nameError, 'insira um nome válido'));
+    emailInput.addEventListener('blur', () => validateField(emailInput, emailError, 'insira um e-mail válido'));
+    phoneInput.addEventListener('blur', () => validateField(phoneInput, phoneError, 'insira um telefone válido'));
+    messageInput.addEventListener('blur', () => validateField(messageInput, messageError, 'insira uma mensagem'));
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault()
+        emailjs.sendForm('service_f7zcmcr', 'template_61qmat8', form)
+            .then(() => {
+                alert("mensagem enviada! retornaremos em breve.");
+                form.reset();
+            }, (error) => {
+                alert("erro ao enviar a mensagem: " + JSON.stringify(error));
+            });
+        }
+    )});

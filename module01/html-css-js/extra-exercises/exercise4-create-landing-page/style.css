@@ -213,3 +213,8 @@ footer {
 .contact {
     min-height: 100vh;
 }
+
+
+.error-message {
+    display: none;
+}
