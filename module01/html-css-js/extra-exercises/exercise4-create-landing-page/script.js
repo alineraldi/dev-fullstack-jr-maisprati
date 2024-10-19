@@ -1,16 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     var Swipes = new Swiper('.swiper-container', {
         loop: true,
+        speed: 600, 
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
         pagination: {
             el: '.swiper-pagination',
+            clickable: true, 
+        },
+        autoplay: {
+            delay: 3000, 
+            disableOnInteraction: false, 
         },
     });
 
-    // Smooth Scroll
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -19,6 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             const navbarHeight = document.querySelector('.navbar').offsetHeight;
 
+
             window.scrollTo({
                 top: targetElement.offsetTop - navbarHeight,
                 behavior: 'smooth' 
@@ -26,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // API: Feedback part
+
     let userFeedback = [
         "a galeria surucuá é a melhor galeria colaborativa que já vi... na verdade, a única! é uma das melhores comunidades por aí, sem dúvida!",
         "eu absolutamente amo como é fácil mostrar minha arte aqui. a comunidade é incrível!",
@@ -66,10 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(error => console.error("houve um erro ao carregar so feedbacks: ", error));
 
-    // AOS.js
+
     AOS.init();
 
-    // Form Validation + EmailJs
+
     (function() {
         emailjs.init("N6ynFm-c4GEH5X61c");
     })();

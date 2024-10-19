@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    
 }
 
 body {
@@ -21,6 +22,18 @@ p {
 
 footer {
     background-color: #d4a375;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1.2rem;
+    }
 }
 
 @font-face {
@@ -98,17 +111,24 @@ footer {
     color: #fff;
 }
 
+.services {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
 .service-item {
     border: 0.1rem solid #d4a375;
     border-radius: 1.3rem;
     transition: transform 0.6s ease-in-out;
+    padding: 2rem;
 }
 
 .service-item:hover {
     background-color: #d4a375;
     transform: scale(1.10);
-    border-radius: 1.3rem;
-
 }
 
 .feedback-card {
@@ -118,12 +138,15 @@ footer {
     color: #fff;
     border: 1px solid #811616;
     border-radius: 1.5rem;
+    max-width: 50rem; 
+    word-wrap: break-word; 
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 
 .feedbacks {
     margin-left: 1rem;
 }
-
 
 .search-button {
     background-image: url(img/search-icon.png);
@@ -132,6 +155,7 @@ footer {
     background-position: center;
     background-color: transparent;
     border: none;
+    cursor: pointer;
     width: 2em;
 }
 
@@ -185,13 +209,12 @@ footer {
     justify-content: center;
 }
 
-.swiper-slide img {
-    width: 100%;
-    height: auto;
-    align-items: center;
-    object-fit: cover;
+.slide-background {
+    background-size: contain;       
+    background-position: center;  
+    background-repeat: no-repeat; 
+    height: 90vh;             
 }
-
 
 .about-section {
     min-height: 100vh;
@@ -201,17 +224,9 @@ footer {
     min-height: 100vh;
 }
 
-#services-container{
-    min-height: 100vh;
-}
-
 #feedback {
     min-height: 100vh;
     max-width: 50%;
-}
-
-.contact {
-    min-height: 100vh;
 }
 
 

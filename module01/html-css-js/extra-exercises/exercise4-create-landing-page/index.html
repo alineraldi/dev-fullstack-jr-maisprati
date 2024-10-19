@@ -65,16 +65,20 @@
             </div>
           </nav>
 
-      <div class="swiper-container mt-5 mx-3">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide" style="background-image: url(https://via.placeholder.com/800x400)";>
-            <h2>buy artworks</h2>
+          <div class="swiper-container mx-3">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-background" style="background-image: url(img/carousel1.png);">
+                <div class="container d-flex align-items-center justify-content-end" style="height: 100vh;">
+                    <h3>exponha sua arte</h3>
+                </div>
             </div>
-            
-            <div class="swiper-slide" style="background-image: url(https://via.placeholder.com/800x400);"> 
-              <h2>sell your art</h2>
-          </div>
-        </div>
+        
+                <div class="swiper-slide slide-background" style="background-image: url(img/carousel2.png);">
+                    <div class="container d-flex align-items-center justify-content-start" style="height: 100vh;">
+                        <h3>adquira obras</h3>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
@@ -88,45 +92,51 @@
     </div>
   </div>
 
-  <div data-aos="flip-left" id="services-container" class="services container mt-3 d-flex align-items-center justify-content-center">
-      <h2 class="subtitle">serviços</h2>
-      <div class="service-item p-3 pl-4 m-1">
-        <h3 class="services-subtitle">expôr</h3>
-        <p class="services-p">exiba e venda sua arte de modo simples</p>
+  <div data-aos="flip-left" id="services" class="services container d-flex align-items-center justify-content-center">
+    <h2 class="subtitle">serviços</h2>
+    <div class="service-item p-3 pl-4 m-1">
+      <h3 class="services-subtitle">expôr</h3>
+      <p class="services-p">exiba e venda sua arte de modo simples</p>
     </div>
-    <div class="service-item p-3 m-1">
+    <div class="service-item p-3 pl-4 m-1">
       <h3 class="services-subtitle">adquirir</h3>
       <p class="services-p">descubra e compre peças únicas</p>
+    </div>
   </div>
-  </div>
+  
 
     <div id="feedback" class="container mt-5">
       <h2 class="feedbacks">feedbacks</h2>
       <div id="feedback-container"></div>
     </div>
 
-    <div data-aos="flip-up" id="contact" class="contact-section text-center">
+    <div data-aos="flip-up" id="contact" class="contact-section text-center d-flex flex-column justify-content-center align-items-center" style="min-height: 100vh;">
         <h2 id="subtitle">contato</h2>
         <form id="form">
+          <div class="mb-3">
             <label for="name">nome:</label>
             <input type="text" id="name" placeholder="insira seu nome aqui" required>
             <div id="nameError" class="error-message"></div>
-            <br> <br>
+          </div>
+          <div class="mb-3">
             <label for="email">e-mail:</label>
             <input type="email" id="email" placeholder="agora, insira seu e-mail" required>
             <div id="emailError" class="error-message"></div>
-            <br><br>
+          </div>
+          <div class="mb-3">
             <label for="phone">telefone:</label>
             <input type="tel" id="phone" placeholder="e o telefone?" required>
             <div id="phoneError" class="error-message"></div>
-            <br><br>
+          </div>
+          <div class="mb-3">
             <label for="message">mensagem: </label>
             <textarea id="message" placeholder="escreva sua mensagem pra gente :)" required></textarea>
             <div id="messageError" class="error-message"></div>
-            <br><br>
-            <button id="sendButton" type="submit">enviar</button>
+          </div>
+            <button id="sendButton" class="btn button" type="submit">enviar</button>
         </form>
       </div>
+      
 
     <footer>
       <div class="footer pt-3 d-flex justify-content-around">
@@ -137,10 +147,10 @@
         </ul>
 
         <ul class="ul list-unstyled ml-5">
-          <li><a href=""><i class="fa fa-instagram"></i></a>
-          <li><a href=""><i class="fa fa-linkedin"></i></a>
-          <li><a href=""><i class="fa fa-facebook"></i></a>
-          <li><a href=""><i class="fa fa-youtube"></i></a>
+          <li><a href="" style="color: black;"><i class="fa fa-instagram"></i></a>
+          <li><a href="" style="color: black;"><i class="fa fa-linkedin"></i></a>
+          <li><a href="" style="color: black;"><i class="fa fa-facebook"></i></a>
+          <li><a href="" style="color: black;"><i class="fa fa-youtube"></i></a>
         </ul>
       </div>
     </footer>
