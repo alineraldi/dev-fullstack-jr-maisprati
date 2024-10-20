@@ -48,7 +48,7 @@
 
 ###
 
-<p align="left">Link CDN:<br><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"></p>
+<p align="left">Link CDN:<br>"< link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" >"</p>
 
 ###
 
@@ -56,7 +56,7 @@
 
 ###
 
-<p align="left">Link CDN:<br><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"></p>
+<p align="left">Link CDN:<br>"< link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" >"</p>
 
 ###
 
@@ -64,7 +64,7 @@
 
 ###
 
-<p align="left">Link CDN:<br><link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"></p>
+<p align="left">Link CDN:<br>"< link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >"</p>
 
 ###
 
@@ -72,7 +72,7 @@
 
 ###
 
-<p align="left">Link CDN:<br><link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet"></p>
+<p align="left">Link CDN:<br>"< link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet"> "</p>
 
 ###
 
