@@ -76,7 +76,7 @@
 
 ###
 
-<h4 align="left">APIs Externas<br>Este projeto não utiliza APIs externas para chamadas de dados, focando principalmente em bibliotecas de front-end para aprimorar a usabilidade e o design da página.</h4>
+<h4 align="left">APIs Externas<br>Este projeto utiliza as APIs **EmailJS** para envio de emails diretamente do front-end e **RandomUser** para gerar dados de usuários fictícios na seção de Feedbacks. Ambas as APIs são integradas para melhorar a funcionalidade e usabilidade da aplicação.</h4>
 
 ###
 
