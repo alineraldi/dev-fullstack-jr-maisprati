@@ -97,3 +97,40 @@ header {
     transform: transLateX(5px);
     font-weight: 300;
 }
+
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper .swiper-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.swiper .swiper-wrapper .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.swiper .swiper-wrapper .swiper-slide::before {
+    position: absolute;
+    content: ""; /* TRANSPARENCY */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.swiper .swiper-wrapper .swiper-slide img {
+    display: bloc;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
