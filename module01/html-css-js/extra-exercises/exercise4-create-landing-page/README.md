@@ -1,10 +1,12 @@
+###
+
 <div align="center">
-  <img height="200" src="https://i.postimg.cc/tgQ933pY/header-readme.png"  />
+  <img src="https://i.postimg.cc/DZgwVdDm/header-readme.png"  />
 </div>
 
 ###
 
-<p align="left">Este repositório contém a Atividade 4 do curso Desenvolvimento FullStack Jr oferecido pela +prati em parceria com a Codifica. O objetivo desta atividade foi criar uma Landing Page para uma galeria fictícia chamada "Galeria Surucuá". A página foi desenvolvida utilizando HTML, CSS, e diversas bibliotecas e frameworks externos para aprimorar o design e a funcionalidade da aplicação.</p>
+<p align="left">Este repositório contém a Atividade 4 do curso Desenvolvimento FullStack Jr oferecido pela +prati em parceria com a Codifica. O objetivo desta atividade foi criar uma Landing Page: Criei a página de uma galeria de arte fictícia chamada "Galeria Surucuá". O surucuá é minha ave favorita e sou artista em meu tempo livre, o que adiciona uma camada de significado ainda mais especial para este projeto. A página foi desenvolvida utilizando HTML, CSS, e diversas bibliotecas e frameworks externos para aprimorar o design e a funcionalidade da aplicação.</p>
 
 ###
 
