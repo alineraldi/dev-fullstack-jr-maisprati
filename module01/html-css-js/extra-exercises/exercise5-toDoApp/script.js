@@ -31,7 +31,13 @@ function renderTasks(tasks) {
             <td>${task.name}</td>
             <td>${task.date}</td>
             <td>${task.type}</td>
+            <td><input type="checkbox" ${task.done ? 'checked' : ''}></td>
         `;
+
+        const checkbox = tr.querySelector('input[type="checkbox"]');
+        checkbox.addEventListener('change', () => {
+            task.done = checkbox.checked;
+        });
         taskTableBody.appendChild(tr);
     });
 }
@@ -51,9 +57,8 @@ function searchTasks() {
     renderTasks(filteredTasks);
 }
 
-// Event listeners
+const savedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
 document.getElementById('addTaskButton').addEventListener('click', addTask);
 document.getElementById('searchTaskButton').addEventListener('click', searchTasks);
 
-// Initial render
-renderTasks(JSON.parse(localStorage.getItem('tasks')) || []);
+
