@@ -10,7 +10,8 @@ function addTask() {
         const newTask = {
             name: taskText,
             date: taskDate,
-            type: taskType
+            type: taskType,
+            done: false
         };
         tasks.push(newTask);
         localStorage.setItem('tasks', JSON.stringify(tasks));
@@ -34,9 +35,8 @@ function renderTasks(tasks, index) {
             <td>${task.type}</td>
             <td><input type="checkbox" ${task.done ? 'checked' : ''}></td>
             <td>
-                <button class="btn btn-sm btn-warning" id="editTaskButton${index}" onclick="editTask(${index})">Edit</button>
-                <button class="btn btn-sm btn-warning" onclick="deleteTask(${index})">Delete</button>
-            </td>
+            <button class="btn btn-editdelete" id="editTaskButton${index}" onclick="editTask(${index})">Edit</button>
+            <button class="btn btn-editdelete" onclick="deleteTask(${index})">Delete</button></td>
         `;
 
         const checkbox = tr.querySelector('input[type="checkbox"]');
