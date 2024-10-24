@@ -34,7 +34,7 @@ function renderTasks(tasks, index) {
             <td>${task.date}</td>
             <td>${task.type}</td>
             <td><input type="checkbox" ${task.done ? 'checked' : ''}></td>
-            <td>
+            <td class="bg-transparent">
             <button class="btn btn-editdelete" id="editTaskButton${index}" onclick="editTask(${index})">Edit</button>
             <button class="btn btn-editdelete" onclick="deleteTask(${index})">Delete</button></td>
         `;
@@ -74,10 +74,10 @@ function editTask(index) {
 
     const row = document.getElementById(`taskRow${index}`);
 
-    row.cells[0].innerHTML = `<input type="text" class="form-control" value="${task.name}" />`;
-    row.cells[1].innerHTML = `<input type="date" class="form-control" value="${task.date}" />`;
+    row.cells[0].innerHTML = `<input type="text" class="form-control custom-input" value="${task.name}" />`;
+    row.cells[1].innerHTML = `<input type="date" class="form-control custom-input" value="${task.date}" />`;
     row.cells[2].innerHTML = `
-        <select class="form-control">
+        <select class="form-control custom-input">
             <option value="Work" ${task.type === "Work" ? "selected" : ""}>Work</option>
             <option value="Studies" ${task.type === "Studies" ? "selected" : ""}>Studies</option>
             <option value="Chores" ${task.type === "Chores" ? "selected" : ""}>Chores</option>
@@ -86,7 +86,7 @@ function editTask(index) {
 
 
     const saveButton = document.createElement('button');
-    saveButton.className = "btn btn-sm btn-success";
+    saveButton.className = "btn btn-sm";
     saveButton.innerText = "Save";
     
     saveButton.onclick = function () {
