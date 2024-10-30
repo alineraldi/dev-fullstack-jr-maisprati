@@ -8,24 +8,27 @@ body {
 
 header {
     display: flex;
+    align-items: center;
 }
 
 header img {
-    max-width: 7rem;
+    max-width: 4rem;
     margin-right: 1rem;
 }
 
 h1 {
     color: rgb(239, 227, 54);
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 h3 {
     color: lightyellow;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
 }
 
 .options {
+    margin: 0;
+    padding: 0;
     display: flex;
     list-style-type: none;
 }
