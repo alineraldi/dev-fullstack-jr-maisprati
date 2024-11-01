@@ -1,10 +1,11 @@
-import LifeCycleFunctionalComponent from './LifeCicleFunctionalComponent.';
-import MyClassComponent from './MyClassComponent';
+/* Creating a component */
+
+import React, { Component } from 'react'
 
 function App() {
   return (
     <>
-      <LifeCycleClassFunctionalComponent/>
+    <Greeting name="Aline"/>
     </>
   );
 }

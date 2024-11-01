@@ -19,7 +19,7 @@ function LifeCycleFunctionalComponent() {
 
     return (
         <div>
-            <p>Cntagem: {count}</p>
+            <p>Contagem: {count}</p>
             <button onClick={increment}>Incremente a Contagem</button>
         </div>
     )

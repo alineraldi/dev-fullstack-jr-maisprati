@@ -1,0 +1,38 @@
+<!-- Exercise: Counter with Lifecycle Messages
+Objective:
+
+Create a React class component called Counter that:
+
+Allows the user to increment, decrement, and reset the counter value.
+Displays specific messages in the console at each stage of the lifecycle: when the component mounts, updates, and unmounts.
+Adds a check to prevent the counter from going below zero.
+Requirements:
+
+Initial State: Define an initial state with a count property equal to 0.
+Buttons:
+Increment: Increases count by 1.
+Decrement: Decreases count by 1 (does not allow negative values).
+Reset: Sets count back to 0.
+Console Messages: Display messages in the following lifecycle stages of the component:
+Mount: Display "Component mounted" in componentDidMount.
+Update: Display "Counter updated" in componentDidUpdate.
+Unmount: Display "Component will be unmounted" in componentWillUnmount.
+Validation: Prevent decrementing the value if it's equal to 0.
+Additional Challenge:
+
+Alert Message: Add a message that appears in an alert when the count value is a multiple of 5.
+Maximum Limit: Set a maximum limit for the counter, such as 10, and disable the increment button when the value reaches this limit. -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
