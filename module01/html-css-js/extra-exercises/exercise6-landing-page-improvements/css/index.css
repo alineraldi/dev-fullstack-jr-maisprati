@@ -184,6 +184,7 @@ a {
     box-shadow: none;
     margin-left: 5rem;
     margin-right: 5rem;
+    border: 0px;
 }
 
 
@@ -201,14 +202,31 @@ a {
 }
 
 @keyframes pulse {
-    0% {
+    0%, 100% {
         transform: scale(1);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.05);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@keyframes border-animation {
+    0% {
+        clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
+    }
+    25% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+    }
+    50% {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 100% 100%);
+    }
+    75% {
+        clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
     }
     100% {
-        transform: scale(1);
+        clip-path: polygon(0% 0%, 0% 0%, 0% 100%, 0% 100%);
     }
 }
 
@@ -309,17 +327,63 @@ a {
     z-index: 100;
 }
 
-.banner .right .description {
-    margin-top: 7rem; 
-    padding: 1.875rem 3.75rem 0 0;
+.banner .left .features .pricing .buy-button {
+    padding: 0.9375rem; 
+    font-size: 1.25rem; 
+    font-weight: 400;
+    color: var(--primary);
+    background: #ffffff;
+    animation: pulse 2s infinite ease-in-out;
+    transition: transform 0.2s ease-in-out;
+}
+
+.banner .left .features .pricing .buy-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--primary); 
+    box-sizing: border-box;
+    animation: border-animation 3s linear infinite;
+}
+
+.banner .left .features .pricing .buy-button:hover {
+    padding: 0.9375rem; 
+    font-size: 1.25rem; 
+    font-weight: 400;
     color: #ffffff;
+    border: 2px solid #ffffff; 
+    background: #ff0000;
 }
 
-.banner .right .description li {
-    list-style: none;
+.banner .right .release-modes .date-icon {
+    padding: 0.9375rem; 
+    font-size: 1.25rem; 
+    font-weight: 400;
+    color: var(--primary);
+    background: #ffffff;
 }
 
-.banner .right .description h4 {
+.banner .right .release-modes {
+    margin-top: 10rem;
+}
+
+.banner .right .release-modes .dates {
+    display:flex;
+    margin-bottom: 2rem;;
+}
+
+.banner .right .release-modes .playing-modes {
+    display:flex;
+}
+
+.banner .right .release-modes .content {
+    margin-left: 1rem;
+}
+
+h4 {
     font-family: "MuseoModerno";
     display: inline-block;
     font-size: 1.125rem;
@@ -327,16 +391,11 @@ a {
     font-weight: 400;
     letter-spacing: 0.0625rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #ffffff;
 }
 
-.banner .right .description p {
-    margin: 5px 0 25px 30px;
-    font-weight: 300;
-}
 
-.banner .right h2 {
+h2 {
     color: #ffffff;
     font-size: 2.5em;
     line-height: 1em;
@@ -345,6 +404,11 @@ a {
     margin-bottom: 1.25rem;
     text-transform: uppercase;
     font-family: 'Nunito Sans', sans-serif;
+}
+
+p {
+    font-family: 'Nunito Sans', sans-serif;
+    color: #ffffff;
 }
 
 .banner .right iframe {
@@ -356,4 +420,157 @@ a {
     margin-top: 13rem;
     position: relative;
     z-index: 3;
+}
+
+.trailer {
+    margin-top: 2rem;
+}
+
+.trailer h2 {
+    margin-top: 0;
+    font-size: 1rem;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 2rem;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    
+}
+
+.close-button {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 768px) { /* tablets */
+    header {
+        padding: 1rem; /* reduz o padding */
+        flex-direction: column; /* coloca os itens em uma coluna */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .logo img {
+        max-width: 2.5rem; /* ajusta o tamanho da logo */
+        max-height: 2.5rem;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: center; /* centraliza os itens */
+        margin-top: 1rem;
+    }
+
+    .nav li a {
+        padding: 0.5rem; /* ajusta o padding */
+        font-size: 0.9rem; /* reduz o tamanho da fonte */
+    }
+
+    .search {
+        width: 6rem; /* diminui o tamanho da busca */
+    }
+
+    .search:hover {
+        width: 12rem; /* ajusta o aumento ao passar o mouse */
+    }
+
+    .swiper .swiper-wrapper .swiper-slide img {
+        height: auto;
+    }
+    
+    .banner img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) { 
+    header {
+        padding: 0.8rem; 
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .logo img {
+        max-width: 2rem; 
+        max-height: 2rem;
+    }
+
+    .nav {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .nav li a {
+        padding: 0.4rem;
+        font-size: 0.8rem; 
+        text-align: center;
+    }
+
+    .search {
+        width: 5rem; 
+    }
+
+    .swiper .swiper-wrapper .swiper-slide .banner img {
+        max-width: 90%; /* ajusta a largura da imagem para caber em smartphones */
+        height: auto;
+    }
+
+    .banner .left .features .rating {
+        margin-bottom: 1rem; /* ajusta o espaçamento */
+    }
+
+    .banner .left .features .content h4 {
+        font-size: 1rem; /* reduz o tamanho da fonte */
+    }
+
+    .banner h1 {
+        font-size: 2rem; /* ajusta o tamanho do título */
+    }
+
+    .banner .right {
+        max-width: 100%; /* ajusta a largura da seção */
+    }
+
+    .banner .right iframe {
+        max-width: 100%;
+        max-height: 10rem;
+    }
+    
+    .modal-content {
+        width: 90%; /* ajusta o modal para caber melhor em telas pequenas */
+    }
+
+    .swiper .swiper-wrapper .swiper-slide img {
+        height: auto;
+    }
+    
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
 }

@@ -1,3 +1,27 @@
+function openModal1() {
+    document.getElementById("purchaseModal1").style.display="block";
+}
+
+function closeModal1() {
+    document.getElementById("purchaseModal1").style.display="none";
+}
+
+function openModal2() {
+    document.getElementById("purchaseModal2").style.display="block";
+}
+
+function closeModal1() {
+    document.getElementById("purchaseModal2").style.display="none";
+}
+
+function openModal3() {
+    document.getElementById("purchaseModal3").style.display="block";
+}
+
+function closeModal3() {
+    document.getElementById("purchaseModal3").style.display="none";
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     let swiper = new Swiper('.swiper', {
         direction: 'horizontal',
@@ -43,11 +67,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    const emailModalBtn = document.getElementById('OpenEmailModal')
-    const emailModal = document.getElementById('emailModal')
-    const closeEmailModalBtn = emailModal.querySelector('.close')
-
-    emailModalBtn.addEventListener('click', function() {
-        emailModal.style.display = 'block'
-    })
+    window.onclick = function(event) {
+        const modal = document.getElementById("purchaseModal1");
+        if(event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 });
