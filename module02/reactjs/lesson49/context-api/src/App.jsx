@@ -8,7 +8,7 @@ function App() {
     <>
     <div>
       <h1>
-        Lista de Tarefas
+        Task List
       </h1>
       <AddTodo/>
       <TodoList/>
