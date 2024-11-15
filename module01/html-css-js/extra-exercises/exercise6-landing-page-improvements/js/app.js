@@ -10,7 +10,7 @@ function openModal2() {
     document.getElementById("purchaseModal2").style.display="block";
 }
 
-function closeModal1() {
+function closeModal2() {
     document.getElementById("purchaseModal2").style.display="none";
 }
 

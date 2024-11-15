@@ -92,7 +92,8 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.5);
     outline: none;
     border-radius: 0.25rem; 
-    padding: 0 0.625rem 0 0.3125rem; /
+    padding: 0 0.625rem 0 0.3125rem; 
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 .search input::placeholder {
@@ -262,7 +263,6 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
 }
 
 .banner .left .features .pricing {
@@ -299,16 +299,23 @@ a {
     text-transform: uppercase;
 }
 
+.login-button-search-div {
+    display: flex;
+}
+
 .login-button {
-    padding-top: 0.8rem;
-    padding-bottom: 0.8rem;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    margin-right: 0.5rem;
     background-color: transparent;
     color: #fff;
-    border-radius: 0.5rem;
-    transition: 0.5s;
+    transition: 0.1s;
     text-transform: uppercase;
+    animation: pulse 2s infinite ease-in-out;
+    transition: transform 0.2s ease-in-out;
+    font-family: 'Nunito Sans', sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    outline: none;
+    border-radius: 0.25rem; 
+    padding: 0 0.625rem 0 0.625rem;
 }
 
 .login-button:hover{
@@ -358,12 +365,14 @@ a {
     background: #ff0000;
 }
 
-.banner .right .release-modes .date-icon {
+.banner .right .release-modes .dategamepad-icon {
     padding: 0.9375rem; 
     font-size: 1.25rem; 
     font-weight: 400;
     color: var(--primary);
     background: #ffffff;
+    display: flex;
+    align-items: center;
 }
 
 .banner .right .release-modes {
@@ -372,7 +381,7 @@ a {
 
 .banner .right .release-modes .dates {
     display:flex;
-    margin-bottom: 2rem;;
+    margin-bottom: 2rem;
 }
 
 .banner .right .release-modes .playing-modes {
@@ -466,54 +475,97 @@ p {
 }
 
 @media (max-width: 768px) { /* tablets */
+
+    .swiper-wrapper {
+        margin: 3rem;
+        box-sizing: border-box;
+    }
+
     header {
-        padding: 1rem; /* reduz o padding */
-        flex-direction: column; /* coloca os itens em uma coluna */
+        padding: 1rem; 
+        flex-direction: column; 
         justify-content: center;
         align-items: center;
     }
+
+    nav {
+        margin-bottom: 0.7rem;
+    }
     
     .logo img {
-        max-width: 2.5rem; /* ajusta o tamanho da logo */
+        max-width: 2.5rem; 
         max-height: 2.5rem;
     }
 
     .nav {
         width: 100%;
-        justify-content: center; /* centraliza os itens */
+        justify-content: center; 
         margin-top: 1rem;
     }
 
     .nav li a {
-        padding: 0.5rem; /* ajusta o padding */
-        font-size: 0.9rem; /* reduz o tamanho da fonte */
+        padding: 0.5rem; 
+        font-size: 0.9rem;
     }
 
     .search {
-        width: 6rem; /* diminui o tamanho da busca */
+        width: 6rem;
     }
 
     .search:hover {
-        width: 12rem; /* ajusta o aumento ao passar o mouse */
-    }
-
-    .swiper .swiper-wrapper .swiper-slide img {
-        height: auto;
+        width: 12rem;
     }
     
-    .banner img {
+    .swiper .swiper-wrapper .swiper-slide .banner img {
+        position: absolute;
+        max-width: 43.75rem;
+        transform: translateX(-50%);
+        z-index: 0;
+        left: 50%;
         width: 100%;
+    }
+
+    .character {
+        width: 100%;
+    }
+
+    .release-modes {
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+
+    .banner .left .features {
+        margin-bottom: 20rem;
     }
 }
 
 @media (max-width: 480px) { 
+
+    .swiper-wrapper {
+        margin: 1rem;
+        box-sizing: border-box;
+    }
+
     header {
         padding: 0.8rem; 
         flex-direction: column; 
         align-items: center;
     }
 
+    nav {
+        margin-bottom: 0.7rem;
+    }
+
+    p {
+        font-size: 0.700rem;
+    }
+
+    h4 {
+        font-size: 0.800em;
+    }
+
     .logo img {
+        margin-top: 1rem;
         max-width: 2rem; 
         max-height: 2rem;
     }
@@ -536,41 +588,86 @@ p {
     }
 
     .swiper .swiper-wrapper .swiper-slide .banner img {
-        max-width: 90%; /* ajusta a largura da imagem para caber em smartphones */
+        max-width: 90%;
         height: auto;
     }
 
     .banner .left .features .rating {
-        margin-bottom: 1rem; /* ajusta o espaçamento */
+        margin-bottom: 1rem;
     }
 
     .banner .left .features .content h4 {
-        font-size: 1rem; /* reduz o tamanho da fonte */
+        font-size: 0.800rem;
+    }
+
+    .banner .left .features .content .subtitle {
+        white-space: nowrap;
     }
 
     .banner h1 {
-        font-size: 2rem; /* ajusta o tamanho do título */
+        font-size: 1.5rem; /* Ajustando a fonte para tela menor */
+        margin-left: 1rem;
     }
 
+    /* Ajustando o layout para flexbox e responsividade */
+    .banner {
+        display: flex;
+        flex-wrap: wrap; /* Permite que o conteúdo se ajuste de forma flexível */
+        justify-content: space-between; /* Distribui os itens de forma equilibrada */
+    }
+
+    .banner .left, .banner .right {
+        flex: 1 1 45%; /* Cada lado ocupa até 45% da largura disponível */
+        box-sizing: border-box; /* Para que padding não afete a largura total */
+    }
+
+    /* Ajustando a parte direita */
     .banner .right {
-        max-width: 100%; /* ajusta a largura da seção */
+        margin-top: 1rem;
+        padding-right: 1rem; /* Ajuste no padding para evitar transbordamento */
+    }
+
+    .banner .right .release-modes {
+        width: 100%; 
+        max-width: 100%;
+        margin-top: 12rem;
+        padding: 0.5rem; 
+        box-sizing: border-box;
     }
 
     .banner .right iframe {
         max-width: 100%;
         max-height: 10rem;
     }
-    
+
     .modal-content {
-        width: 90%; /* ajusta o modal para caber melhor em telas pequenas */
+        width: 90%; 
     }
 
-    .swiper .swiper-wrapper .swiper-slide img {
-        height: auto;
+    .swiper .swiper-wrapper .swiper-slide .banner-img {
+        height: 100%;
+        object-fit: cover;
     }
-    
-    .banner img {
-        width: 100%;
-        height: auto;
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        display: none;
+        background: none;
+        box-shadow: none;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border: 0px;
     }
+
+    .banner .left .features {
+        max-width: 20rem; 
+        margin-top: 6.25rem;
+        margin-left: 1rem;
+        padding: 0.3125rem; 
+    }
+
+    .trailer {
+        margin-right: 1rem;
+    }
+
 }

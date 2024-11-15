@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Gaming Website Landing Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -25,11 +26,11 @@
                 <li><a href="https://www.nintendo.com/us/switch/online/nintendo-switch-online/classic-games/" target="_blank">Switch Classic</a></li>
             </ul>
         </nav>
-        <div class="login-button-div">
+        <div class="login-button-search-div">
             <button class="login-button">Login</button>
-        </div>
-        <div class="search">
+            <div class="search">
             <input type="text" id="gameInput" placeholder="Search">
+        </div>
         </div>
     </header>
 
@@ -39,7 +40,7 @@
                 
                 <!-- Slide 1: Super Mario Odyssey -->
                 <article class="swiper-slide" id="slide-1" aria-label="Super Mario Odyssey">
-                    <img src="img/super_mario_odyssey_dinosaur_4k.jpeg" alt="Banner do Super Mario Odyssey">
+                    <img class="banner-img" src="img/super_mario_odyssey_dinosaur_4k.jpeg" alt="Banner do Super Mario Odyssey">
                     <div class="backscene"></div>
                     <div class="banner">
                         <div class="left">
@@ -68,7 +69,7 @@
                         <div class="right">
                             <div class="release-modes">
                                 <div class="dates">
-                                    <span class="date-icon"><i class="fa-solid fa-calendar"></i></span>
+                                    <span class="dategamepad-icon"><i class="fa-solid fa-calendar"></i></span>
                                     <div class="content">
                                         <h4>Data de Lançamento</h4>
                                         <p>27 de Outubro 2017</p></li>
@@ -76,12 +77,13 @@
                                 </div>
 
                                 <div class="playing-modes">
-                                    <span class="date-icon"><i class="fa-solid fa-gamepad"></i></span>
+                                    <span class="dategamepad-icon"><i class="fa-solid fa-gamepad"></i></span>
                                         <div class="content">
                                         <h4>Modos de jogo</h4>
-                                        <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
+                                        <p>Modo TV, Semiportátil, Portátil</p>
                                         </div>
                                 </div>
+                            </div>
                             <div class="trailer">
                                 <iframe width="1280" height="720" src="https://www.youtube.com/embed/5kcdRBHM7kM" title="Super Mario Odyssey Trailer" allowfullscreen></iframe>
                                 <h2>Assista ao Trailer</h2>
@@ -91,7 +93,7 @@
                     <div id="purchaseModal1" class="modal">
                         <div class="modal-content">
                             <span class="close-button" onclick="closeModal1(event)">&times;</span>
-                            <h2>Escolha sua opção de compra:</h2>
+                            <h3>Escolha sua opção de compra:</h3>
                             <ul>
                                 <li><a href="https://www.nintendo.com/pt-br/store/products/super-mario-odyssey-switch/" target="_blank">Site Oficial Nintendo</a></li>
                                 <li><a href="https://www.amazon.com.br/Super-Mario-Odyssey-Nintendo-Switch/dp/B0BKCNRYGT/ref=sr_1_1?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=115FNS92SRMTI&dib=eyJ2IjoiMSJ9.x2-ukTLYWkGfbMPPZhvJ5kqtkolOXJ9q5xMOYnqNDvo-EKSIg4-R_7bzQWChS6ZXPt70tRjD0cP66LlSZQkXC3Z03f_7HzbbHHsfvEN63On_hF2giOos0zRzwwJJoao_U4PbH_hRfYajXVx5jO-xjuoGVXdjq2xXg7VMf_MtQEU-r6jpbElcEwcSJVfXvPM9En1bOHjmCg0LEMBB3tcjFg5WbLqUT_wyUx6f3tCb6sBbTQLYVLcTpN4MZc9VZm3rVypV9LNkWpM0JtRC0GfNuq3Z6yWPO5oePzDGMNLTQvo.pPz8gstzWJowjnljVvnwK47LKJdB2mGwguFhCGzidaM&dib_tag=se&keywords=super+mario+odyssey&qid=1731334313&sprefix=super+mario+oysse%2Caps%2C269&sr=8-1&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678" target="_blank">Amazon</a></li>
@@ -103,8 +105,9 @@
                 </article>
 
 
+                <!-- Slide 2: Pokemon Legends Arceus -->
                 <article class="swiper-slide" id="slide-2" aria-label="Pokemon Legends Arceus">
-                    <img src="img/pokemon-legends-arceus.jpeg" alt="Banner do Pokemon Legends Arceus">
+                    <img class="banner-img" src="img/pokemon-legends-arceus.jpeg" alt="Banner do Pokemon Legends Arceus">
                     <div class="backscene"></div>
                     <div class="banner">
                         <div class="left">
@@ -114,12 +117,12 @@
                                     <div class="content">
                                         <span class="subtitle">M E T A S C O R E</span>
                                         <h4>Bom</h4>
-                                        <span></span>
                                     </div>
                                 </div>
                                 <div class="pricing">
-                                    <a href="" target="_blank"></a>
-                                    <span class="buy-button" onclick="openModal2()"><i class="fa-solid fa-cart-shopping"></i></span>
+                                    <span class="buy-button" onclick="openModal2()">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                    </span>
                                     <div class="content">
                                         <span class="subtitle">Pokemon Legends</span>
                                         <h4>COMPRE AGORA</h4>
@@ -127,41 +130,44 @@
                                     </div>
                                 </div>
                             </div>
-                            <h1 class="pokemon-title">Pokemon Legends</h1>
+                            <h1 class="pokemon-title">Pokemon</h1>
                         </div>
                         <img class="character" src="img/red.png" alt="Treinador Pokemon Red">
                         <div class="right">
                             <div class="release-modes">
                                 <div class="dates">
-                                    <span class="date-icon"><i class="fa-solid fa-calendar"></i></span>
+                                    <span class="dategamepad-icon">
+                                        <i class="fa-solid fa-calendar"></i>
+                                    </span>
                                     <div class="content">
                                         <h4>Data de Lançamento</h4>
-                                        <p>28 de Janeiro 2016</p></li>
+                                        <p>28 de Janeiro 2016</p>
                                     </div>
                                 </div>
-
                                 <div class="playing-modes">
-                                    <span class="date-icon"><i class="fa-solid fa-gamepad"></i></span>
-                                        <div class="content">
+                                    <span class="dategamepad-icon">
+                                        <i class="fa-solid fa-gamepad"></i>
+                                    </span>
+                                    <div class="content">
                                         <h4>Modos de jogo</h4>
-                                        <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
-                                        </div>
+                                        <p>Modo TV, Semiportátil, Portátil</p>
+                                    </div>
                                 </div>
+                            </div>
                             <div class="trailer">
-                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/6mxhBIOJa0o" title="Pokemon Trailer" allowfullscreen></iframe>
+                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/HntyfvGQlDY?si=myC9zzwbyu6DH1VN" title="Pokemon Trailer" allowfullscreen></iframe>
                                 <h2>Assista ao Trailer</h2>
                             </div>
                         </div>
                     </div>
-
                     <div id="purchaseModal2" class="modal">
                         <div class="modal-content">
                             <span class="close-button" onclick="closeModal2(event)">&times;</span>
-                            <h2>Escolha sua opção de compra:</h2>
+                            <h3>Escolha sua opção de compra:</h3>
                             <ul>
                                 <li><a href="https://www.nintendo.com/pt-br/store/products/pokemon-legends-arceus-switch/?srsltid=AfmBOootu8bcKzBp-VyYWZWk9Vxk-2MmbRZAq-4WT5BB5n-JuFHMZBsn" target="_blank">Site Oficial Nintendo</a></li>
                                 <li><a href="https://www.amazon.com.br/Pokemon-Legends-Arceus-Nintendo-Switch/dp/B0BKH8PHMY" target="_blank">Amazon</a></li>
-                                <li><a href="hhttps://www.mercadolivre.com.br/pokemon-legends-arceus-switch-fisico/p/MLB18758238#polycard_client=search-nordic&wid=MLB2217976395&sid=search&searchVariation=MLB18758238&position=2&search_layout=grid&type=product&tracking_id=64a8e590-6ebb-4430-b517-5cb6bb084b7a" target="_blank">Mercado Livre</a></li>
+                                <li><a href="https://www.mercadolivre.com.br/pokemon-legends-arceus-switch-fisico/p/MLB18758238" target="_blank">Mercado Livre</a></li>
                             </ul>
                         </div>
                     </div>
@@ -169,17 +175,18 @@
 
 
 
+
                 <article class="swiper-slide" id="slide-3" aria-label="The Legend of Zelda: Breath of the Wild">
-                    <img src="img/The-Legend-of-Zelda-Breath-of-the-Wild.jpeg" alt="Banner The Legend of Zelda Breath of the Wild">
+                    <img class="banner-img" src="img/The-Legend-of-Zelda-Breath-of-the-Wild.jpeg" alt="Banner do The Legend of Zelda: Breath of the Wild">
                     <div class="backscene"></div>
                     <div class="banner">
                         <div class="left">
                             <div class="features">
                                 <div class="rating">
-                                    <span class="score">9.7</span>
+                                    <span class="score">10.0</span>
                                     <div class="content">
                                         <span class="subtitle">M E T A S C O R E</span>
-                                        <h4>EXCELENTE</h4>
+                                        <h4>Obra-prima</h4>
                                         <span></span>
                                     </div>
                                 </div>
@@ -187,35 +194,34 @@
                                     <a href="" target="_blank"></a>
                                     <span class="buy-button" onclick="openModal3()"><i class="fa-solid fa-cart-shopping"></i></span>
                                     <div class="content">
-                                        <span class="subtitle">The Legend of Zelda: Breath of The Wild</span>
+                                        <span class="subtitle">The Legend of Zelda</span>
                                         <h4>COMPRE AGORA</h4>
-                                        <span>Aventura, Ação, RPG</span>
+                                        <span>Ação, Aventura, RPG</span>
                                     </div>
                                 </div>
                             </div>
                             <h1 class="zelda-title">Zelda</h1>
                         </div>
-                        <img class="character" src="img/link.png" alt="Link">
+                        <img class="character" src="img/link.png" alt="Personagem Link do The Legend of Zelda">
                         <div class="right">
                             <div class="release-modes">
                                 <div class="dates">
-                                    <span class="date-icon"><i class="fa-solid fa-calendar"></i></span>
+                                    <span class="dategamepad-icon"><i class="fa-solid fa-calendar"></i></span>
                                     <div class="content">
                                         <h4>Data de Lançamento</h4>
-                                        <p>3 de Março de 2017</p></li>
+                                        <p>3 de Março 2017</p>
                                     </div>
                                 </div>
-
                                 <div class="playing-modes">
-                                    <span class="date-icon"><i class="fa-solid fa-gamepad"></i></span>
-                                        <div class="content">
+                                    <span class="dategamepad-icon"><i class="fa-solid fa-gamepad"></i></span>
+                                    <div class="content">
                                         <h4>Modos de jogo</h4>
-                                        <p>Modo TV, Modo Semiportátil, Modo Portátil</p>
-                                        </div>
+                                        <p>Modo TV, Semiportátil, Portátil</p>
+                                    </div>
                                 </div>
-
+                            </div>
                             <div class="trailer">
-                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/1rPxiXXxftE" title="Legend of Zelda: Breath of The Wild Trailer" allowfullscreen></iframe>
+                                <iframe width="1280" height="720" src="https://www.youtube.com/embed/zw47_q9wbBE" title="The Legend of Zelda: Breath of the Wild Trailer" allowfullscreen></iframe>
                                 <h2>Assista ao Trailer</h2>
                             </div>
                         </div>
@@ -223,15 +229,16 @@
                     <div id="purchaseModal3" class="modal">
                         <div class="modal-content">
                             <span class="close-button" onclick="closeModal3(event)">&times;</span>
-                            <h2>Escolha sua opção de compra:</h2>
+                            <h3>Escolha sua opção de compra:</h3>
                             <ul>
-                                <li><a href="https://www.nintendo.com/pt-br/store/products/the-legend-of-zelda-breath-of-the-wild-switch/?srsltid=AfmBOoqEfp0aq3YGDfcqHl_4my9Cr-TadOyFBoaqObrcnkiRTKPUa38w" target="_blank">Site Oficial Nintendo</a></li>
-                                <li><a href="https://www.amazon.com/Legend-Zelda-Breath-Wild-Nintendo-Switch/dp/B01MS6MO77" target="_blank">Amazon</a></li>
-                                <li><a href="https://www.mercadolivre.com.br/the-legend-of-zelda-breath-of-the-wild-standard-edition-nintendo-switch-fisico/p/MLB6334852#polycard_client=search-nordic&wid=MLB2222340662&sid=search&searchVariation=MLB6334852&position=2&search_layout=grid&type=product&tracking_id=d2517da9-22fd-4313-8292-6c46145c0372" target="_blank">Mercado Livre</a></li>
+                                <li><a href="https://www.nintendo.com/pt-br/store/products/the-legend-of-zelda-breath-of-the-wild-switch/" target="_blank">Site Oficial Nintendo</a></li>
+                                <li><a href="https://www.amazon.com.br/Legend-Zelda-Breath-Wild-Nintendo-Switch/dp/B08NXMM6D5" target="_blank">Amazon</a></li>
+                                <li><a href="https://www.mercadolivre.com.br/the-legend-of-zelda-breath-of-the-wild-nintendo-switch-fisico/p/MLB14862140" target="_blank">Mercado Livre</a></li>
                             </ul>
                         </div>
                     </div>
                 </article>
+                
                 
             </div>
             <button class="swiper-button-prev" aria-label="Previous slide"><i class="fa-solid fa-caret-left"></i></button>
