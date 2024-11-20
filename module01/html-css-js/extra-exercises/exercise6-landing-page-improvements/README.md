@@ -1,15 +1,42 @@
-Descrição: Este projeto tem como objetivo aprimorar a landing page já existente no repositório: https://github.com/jhyago/maisPraTi-2024-02/tree/main/2-html-css-js/6-landing-page, implementando as seguintes melhorias e funcionalidades:
+# **🌟 Landing Page Aprimorada**  
 
-Implementação de Modais: Adicionar modais interativos para exibir informações adicionais sobre os jogos ou serviços da página. Esses modais devem ser acionados por botões ou elementos clicáveis e devem conter conteúdo relevante, como formulários, descrições detalhadas, ou opções de compra.
+## **📝 Descrição**  
 
-Novo Slide com Link (Zelda): Incluir um novo slide na seção de carrossel utilizando imagens fornecidas pelo professor. Esse slide deve conter informações sobre um novo jogo ou serviço e incluir um botão que leva a um link externo relevante.
+Este projeto visa aprimorar uma landing page existente, adicionando novas funcionalidades e melhorando a experiência do usuário. As principais melhorias incluem:  
 
-Melhoria na Responsividade: A página deve ser completamente responsiva, garantindo que o layout se ajuste adequadamente em diferentes tamanhos de tela (mobile, tablet, desktop). Ajustar os elementos como imagens, textos, e botões para melhorar a experiência do usuário em dispositivos móveis.
+- **✨ Modal Interativo:** Exibição de informações detalhadas sobre os jogos ou serviços por meio de modais acionados por botões.  
+- **🖼️ Novo Slide com Link:** Inclusão de um slide no carrossel sobre o jogo Zelda, com botão para link externo.  
+- **📱 Responsividade:** Adaptação completa para dispositivos móveis, tablets e desktops.  
+- **🌐 Semântica HTML:** Melhoria da acessibilidade e SEO utilizando elementos semânticos.  
+- **🎨 Ícones Personalizados:** Uso de ícones customizados com Font Awesome ou SVGs.  
+- **🖋️ Fontes Customizadas:** Adição de fontes modernas e estilizadas.  
+- **✅ Testes e Validação:** Garantia de funcionamento correto em diferentes navegadores e dispositivos.  
 
-Aprimoramento de Semântica HTML: Substituir e/ou complementar as tags HTML utilizadas com elementos semânticos adequados (<header>, <section>, <article>, <footer>, etc.) para garantir a acessibilidade e melhorar o SEO da página.
+---
 
-Criação de Ícones Personalizados: Desenvolver ou integrar ícones personalizados para botões e navegação. Esses ícones devem melhorar a usabilidade e a aparência da interface. Considere usar fontes de ícones como Font Awesome ou desenvolver ícones SVG personalizados.
+## **🎯 Objetivos**  
 
-Fontes Customizadas: Adicionar fontes personalizadas para melhorar a estética visual da página. Use fontes modernas e compatíveis com o tema da landing page (como Google Fonts).
+- **👥 Melhorar a experiência do usuário:** Interface mais intuitiva e interativa.  
+- **📈 Aumentar o engajamento:** Elementos visuais atraentes para captar a atenção.  
+- **🔍 Melhorar o SEO:** Técnicas para aumentar a visibilidade nos motores de busca.  
+- **💡 Demonstrar habilidades técnicas:** Aplicação de conhecimentos em HTML, CSS e JavaScript.  
 
-Testes e Validação: Testar a página em diferentes navegadores e dispositivos para garantir que todas as funcionalidades, como o carrossel, modais, links, e responsividade estejam funcionando conforme esperado.
+---
+
+## **💻 Tecnologias Utilizadas**  
+
+- **HTML**  
+- **CSS**  
+- **JavaScript**  
+
+---
+
+## **💖 Agradecimentos**  
+
+Agradeço ao professor Jaques Hyago pela orientação! 🙌  
+
+---
+
+## **🔗 Links Úteis**  
+
+- **Repositório Original:** [Clique aqui para acessar!](https://github.com/jhyago/maisPraTi-2024-02/tree/main/2-html-css-js/6-landing-page)  
