@@ -1,31 +1,52 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { FaMoon, FaSun } from 'react-icons/fa';
 
-function Navigation() {
+export const Navigation = () => {
+    const [isDarkMode, setIsDarkMode] = useState()
+    const [isOpen, setIsOpen] = useState(false)
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen)
+    }
+
+    const toggleTheme = () => {
+        setIsDarkMode(!isDarkMode)
+    }
+
     return (
-        <div>
-            <header>
-                <div className="logo-autora">
-                    <div className="cruz">
-                        <img src="./src/assets/cruz-03.svg"></img>
-                        <div className="nome-navigation">Ana Clara Galli</div>
-                    </div>
-                </div>
+        <header className="p-6 sm:px-12 w-full h-28 z-50 fixed bg-gradient-to-b from-verde2/95 to verde1/80 backdrop-blur-sm">
+            <nav className="flex items-center justify-between">
+                <img src="" alt="" className="w-52 sm:w-64"/>
+                <div className="lg:hidden flex">
+                    <button className="text-branco p-6 mr-3 bg-verde1 hover:bg-black" 
+                    onClick={toggleMenu}>
+                        <svg>
 
-                <div className="Navigation-itens">
-
-                <div className="items">
-                    <p><a href="#" id="linkKits">Kits</a></p>
-                    <p><a href="#" id="linkOndeComprar">Onde Comprar</a></p>
-                    <p><a href="#" id="linkFaleComigo">Fale Comigo</a></p>
-                    <div className="button-navigation">
-                        <div className="ComprarAgora">
-                            <a id="ComprarAgora" href="https://www.catarse.me/rduvng" target="_blank">Comprar Agora</a>
-                        </div>
-                    </div>
+                        </svg>
+                    </button>
+                    <ul className="hidden lg:flex flex-row items-center gap-12 text-branco">
+                        <li>
+                            <a href="" className="hover:underline">Kits</a>
+                        </li>
+                        <li>
+                            <a href="" className="hover:underline">Onde Comprar</a>
+                        </li>
+                        <li>
+                            <a href="" className="hover:underline">Fale Comigo</a>
+                        </li>
+                        <li>
+                            <a href="" className="hover:underline">Comprar Agora</a>
+                        </li>
+                        <li>
+                            <button className="text-branco bg-verde1 hover:bg-black"
+                            onClick={toggleTheme}>
+                                { isDarkMode ? <FaSun /> : <FaMoon /> }
+                            </button>
+                        </li>
+                    </ul>
                 </div>
-             </div>
-            </header>
-        </div>
+            </nav>
+        </header>
     )
 }
 
