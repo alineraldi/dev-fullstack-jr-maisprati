@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="fnm-windows">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/module02/reactjs/lesson52/tests/fnm-windows.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
