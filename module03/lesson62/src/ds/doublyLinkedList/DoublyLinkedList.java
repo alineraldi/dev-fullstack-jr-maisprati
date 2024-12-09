@@ -71,7 +71,7 @@ public class DoublyLinkedList<T> {
         System.out.println("]");
     }
 
-    public void displayJaques() { // Jeito exibido na aula
+    public void displayProf() { // Jeito exibido na aula
         Node<T> current = head;
         System.out.println("Lista: ");
         while(current != null) {
